@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_tutorial_decrypter",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":7.988367,
+  "name":"snd_tutorial_decrypter",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_tutorial_decrypter.ogg",
+  "type":0,
+  "volume":1.0,
+}

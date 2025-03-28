@@ -1,0 +1,55 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+depth = -1000;
+
+y_val = display_get_gui_height();
+
+bonus_str = "\n\n[WASD] to MOVE\n[LMB] to throw WRANG\n[RMB] to PUNCH\n[SHIFT] to SPRINT\n[R] to RESET LEVEL\n[SPACE] to EXIT CREDITS"
+
+credits_str = "CREATED BY\nBish Queen Games";
+
+credits_str += "\n\n\n\n\n" 
+credits_str += "GAME ENGINE\nGameMaker Studio 2\ngamemaker.io" 
+credits_str += "\n\n\n\n\n" 
+credits_str += "CUTSCENE ANIMATION SOFTWARE\nMine-imator\nmineimator.com" 
+credits_str += "\n\n\n\n\n" 
+credits_str += "EDITING SOFTWARE\nDaVinci Resolve\nblackmagicdesign.com" 
+credits_str += "\n\n\n\n\n" 
+credits_str += "CUTSCENE ANIMATION/EDITING\nHallie Johnson" 
+credits_str += "\n\n\n\n\n" 
+credits_str += "ARTWORK SOFTWARE\nFireAlpaca\nfirealpaca.com" 
+credits_str += "\n\n\n\n\n" 
+credits_str += "ARTWORK\nHallie Johnson" 
+credits_str += "\n\n\n\n\n" 
+credits_str += "GAME TEXT FONT\nQuadriana\nfontesk.com/quadriana-font" 
+credits_str += "\n\n\n\n\n" 
+credits_str += "MUSIC\n\n'The Harrowing'\n'City Lanes'\n'Ions Above'\n'Chiptune Roller Derby'" 
+credits_str += "\n'Metro Alchemist'\n'Run at Midnight'\n'Synthwave C'\n'Cruising the Skyline'" 
+credits_str += "\n'Driving to the Future'\n'Winds of Tek'\n'Dystopian Paradise'\n'Metro Tank'" 
+credits_str += "\n'Drifting to the Finish Line'\n'Synthwave I'\n'Phantom of the Night'" 
+credits_str += "\n'Positive Day'\n'A Meeting of Genres'\n'Anthem for Tomorrow'\n'Just Breathe'\n'Bright Future Ahead'\n\nTeknoAXE @ teknoaxe.com" 
+credits_str += "\n\n\n\n\n" 
+credits_str += "SOUNDS\n" 
+credits_str += "\n'Nitro Activation'\nstrexet @ freesound.org\n"
+credits_str += "\n'machinegun-one-shot.wav'\nDeltaCode @ freesound.org\n"
+credits_str += "\n'Futuristic shot'\nBloodPixelHero @ freesound.org\n"
+credits_str += "\n'explosion13.wav'\nV-ktor @ freesound.org\n"
+credits_str += "\n'Distant car tire screetch'\nSadiquecat @ freesound.org\n"
+credits_str += "\n'Fast Woosh - RicRob - \nHelm - 2.wav'\nRuidosoSoundFX @ freesound.org\n"
+credits_str += "\n'small-metal-hit-11.wav'\nnewagesoup @ freesound.org\n"
+credits_str += "\n'VSH-25-knuckle-thump-metal\n-pipe-short.wav'\nnewagesoup @ freesound.org\n"
+credits_str += "\n'quick woosh'\nflorianreichelt @ freesound.org\n"
+credits_str += "\n'Damage sound effect'\nRaclure @ freesound.org\n"
+credits_str += "\n'PUNCH-BOXING-05-REVERB.wav'\nnewagesoup @ freesound.org\n"
+credits_str += "\n'Metal Hit'\nBenjaminNelan @ freesound.org\n"
+credits_str += "\n'success_02.wav'\nKenneth_Cooney @ freesound.org\n"
+credits_str += "\n'Powerup/success.wav'\nGabrielAraujo @ freesound.org\n"
+credits_str += "\n'Snap Click - 07.wav'\nironcross32 @ freesound.org\n"
+credits_str += "\n'Ui sounds - Shimmering success'\nPhilip_Berger @ freesound.org\n"
+//credits_str += "\n'explosion13.wav'\nV-ktor @ freesound.org\n"
+credits_str += "\n\n\n\n\n" 
+credits_str += "SPECIAL THANKS\nThank you ITCS 4230/5230 course\nstaff for being the inspiration of\nthis game of the year masterpiece!"
+credits_str += "\n\n\n\n\n" 
+credits_str += "\n\n\n\n\n" 
+credits_str += "THIS GAME IS FOR \nPERSONAL USE ONLY\nDO NOT DISTRIBUTE" 

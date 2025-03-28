@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_sfx_answer_incorrect",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.214422,
+  "name":"snd_sfx_answer_incorrect",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Sounds/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_sfx_answer_incorrect.ogg",
+  "type":0,
+  "volume":1.0,
+}
