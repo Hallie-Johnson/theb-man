@@ -5,9 +5,9 @@
   "managed":true,
   "name":"obj_index_bahaman",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"name","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Bahaman",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"name","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"The B-Man",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"catchphrase","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"You can't cheat justice.",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"bio","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"My mission is to save studious students from cheaters. Hard work should be rewarded and no one should be able to cheat to the top. Justice must be served and it will be served with an A+.",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"bio","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"My mission is to handle crime with my own hands. Also, it's how I heal my childhood trauma. :)",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"visual","path":"objects/obj_index/obj_index.yy",},"resource":{"name":"spr_bahaman_idle","path":"sprites/spr_bahaman_idle/spr_bahaman_idle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_bahaman_idle",},
   ],
   "parent":{

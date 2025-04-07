@@ -5,9 +5,9 @@
   "managed":true,
   "name":"obj_index_ta_abheek",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"name","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Abheek",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"catchphrase","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Uhhhhh. . . question.",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"bio","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Teaching Assistant of Dr. Bahamon. Highly considered to join the Bahamo-family.",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"name","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Politican J",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"catchphrase","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Vote 4 Me! :)",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"bio","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"My running mate and friend. Together, we will stop crime, no matter what it takes. I manifest that we win this election.",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"visual","path":"objects/obj_index/obj_index.yy",},"resource":{"name":"Abheek","path":"sprites/Abheek/Abheek.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Abheek",},
   ],
   "parent":{

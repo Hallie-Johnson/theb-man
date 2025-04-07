@@ -16,6 +16,9 @@ if (!global.paused) {
 }
 
 
+time += 0.1;
+y = initial_y + sin(time) * 5;
+
 	
 if (obj_bahamobile.draw_mission_failed || obj_bahamobile.draw_mission_complete) {
 	instance_destroy();	

@@ -5,9 +5,9 @@
   "managed":true,
   "name":"obj_index_health",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"name","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Bahamowing Health",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"name","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Health Pickup",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"catchphrase","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"bio","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Enemies drop powerups in the air. I should collect this one to increase my health of my Bahamowing.",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"bio","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"I should collect these when I see them. They help restore the health of my vehicles.",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"visual","path":"objects/obj_index/obj_index.yy",},"resource":{"name":"spr_bahamowing_health","path":"sprites/spr_bahamowing_health/spr_bahamowing_health.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_bahamowing_health",},
   ],
   "parent":{

@@ -6,7 +6,7 @@ draw_self();
 draw_set_halign(fa_left);
 
 draw_set_color(c_black);
-draw_text(x + sprite_width/2 + 100, y + sprite_width/2 - 10, "UPGRADE POINTS: " + string(global.upgrade_points));
+draw_text(x + sprite_width/2 + 100, y + sprite_width/2 - 10, "B-XP: " + string(global.upgrade_points));
 
 draw_set_color(c_white);
-draw_text(x + sprite_width/2 + 100, y + sprite_width/2 - 15, "UPGRADE POINTS: " + string(global.upgrade_points));
+draw_text(x + sprite_width/2 + 100, y + sprite_width/2 - 15, "B-XP: " + string(global.upgrade_points));

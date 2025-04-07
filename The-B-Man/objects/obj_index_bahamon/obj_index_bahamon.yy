@@ -5,9 +5,9 @@
   "managed":true,
   "name":"obj_index_bahamon",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"name","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Dr. Bahamon",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"catchphrase","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"I love Batman.",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"bio","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"A professor who is 100% not me and helps identify the cheaters of the city. I hope one day, cheaters will not invade his classes.",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"name","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Vice Politican B.",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"catchphrase","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Vote for Politican J!",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"bio","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Vice Politican's don't do much. So, I take matters into my own hands and try to be the man my father wanted me to become.",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"visual","path":"objects/obj_index/obj_index.yy",},"resource":{"name":"spr_bahamon_speaking","path":"sprites/spr_bahamon_speaking/spr_bahamon_speaking.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_bahamon_speaking",},
   ],
   "parent":{

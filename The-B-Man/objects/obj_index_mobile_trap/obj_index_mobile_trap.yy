@@ -5,9 +5,9 @@
   "managed":true,
   "name":"obj_index_mobile_trap",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"name","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Abt Trap",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"name","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Cat Trap",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"catchphrase","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"bio","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"These a traps set by Abtwoman on the road. I should avoid these as these deplete the health of my Bahamobile.",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"bio","path":"objects/obj_index/obj_index.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"These a traps set by Meowwoman on the road. I should definitely avoid these as they damage my B-Mobile.",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_index","path":"objects/obj_index/obj_index.yy",},"propertyId":{"name":"visual","path":"objects/obj_index/obj_index.yy",},"resource":{"name":"spr_abt_trap","path":"sprites/spr_abt_trap/spr_abt_trap.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_abt_trap",},
   ],
   "parent":{

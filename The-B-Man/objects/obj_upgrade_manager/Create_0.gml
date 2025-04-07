@@ -11,3 +11,5 @@ for (var i = 0; i < array_length(upgrade_objects); i++) {
     upgrade_objects[i].x = upgrade_x_positions[i == current_upgrade_index ? 1 : 2];
     upgrade_objects[i].target_x = upgrade_objects[i].x; // Add a target_x property
 }
+
+

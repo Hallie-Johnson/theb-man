@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"Hallie",
   "bboxMode":0,
-  "bbox_bottom":27,
-  "bbox_left":10,
-  "bbox_right":22,
+  "bbox_bottom":30,
+  "bbox_left":6,
+  "bbox_right":21,
   "bbox_top":3,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6b5c2e7d-018b-4429-8d84-00cfc4fc4dee","name":"6b5c2e7d-018b-4429-8d84-00cfc4fc4dee","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"d8d40d7f-bdd4-4ce5-98f9-293f74954650","name":"d8d40d7f-bdd4-4ce5-98f9-293f74954650","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":32,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"f9ca5665-c1bc-4d6c-a346-91450da4017a","blendMode":0,"displayName":"default","isLocked":false,"name":"f9ca5665-c1bc-4d6c-a346-91450da4017a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"59609819-a1e7-4412-82c1-347086614362","blendMode":0,"displayName":"default","isLocked":false,"name":"59609819-a1e7-4412-82c1-347086614362","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"Hallie",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6b5c2e7d-018b-4429-8d84-00cfc4fc4dee","path":"sprites/Hallie/Hallie.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0025046f-d857-40c1-bac5-5c80fd77cb61","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d8d40d7f-bdd4-4ce5-98f9-293f74954650","path":"sprites/Hallie/Hallie.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"dbb0ca56-347f-4d19-a34d-42744f46e196","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

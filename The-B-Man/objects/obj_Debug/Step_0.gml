@@ -1,6 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+var clue_count = global.battle_1_clues + global.battle_2_clues + global.battle_3_clues +
+				global.driving_1_clues + global.driving_2_clues + global.driving_3_clues +
+				global.flying_1_clues + global.flying_2_clues + global.flying_3_clues;
+
+var upgrade_count = global.upgrade_wrang_health + global.upgrade_wrang_damage + global.upgrade_wrang_count +
+				global.upgrade_mobile_health + global.upgrade_mobile_boost + global.upgrade_mobile_speed +
+				global.upgrade_wing_health + global.upgrade_wing_damage + global.upgrade_wing_speed;
+				
+
+// SET UPGRADE POINTS CALC
+global.upgrade_points = clue_count - upgrade_count;
+
+
+
 if ((room == rm_SaveFiles || room == rm_Title) && debug) {
 	instance_deactivate_all(true);	
 } else if ((room == rm_SaveFiles || room == rm_Title) && !debug) {

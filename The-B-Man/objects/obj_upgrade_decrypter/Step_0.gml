@@ -4,3 +4,4 @@
 y = obj_upgrade_clues.y;
 
 x = obj_upgrade_clues.x - 550;
+

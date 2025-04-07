@@ -3,3 +3,8 @@
 
 image_xscale = 0.75;
 image_yscale = 0.75;
+
+initial_y = y;
+time = 0;
+
+hit_ground = true;

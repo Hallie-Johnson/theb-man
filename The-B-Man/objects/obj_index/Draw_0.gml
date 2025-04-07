@@ -62,7 +62,7 @@ if (draw_index) {
 	
 		if (visual != noone) {
 			draw_sprite_ext(spr_index_shade, 0, room_width/2 + 200, room_height/2 - 100, 1, 1, 0, c_white, 1);
-			if (object_index == obj_index_juul_fighter or object_index == obj_index_juul_ranged or object_index == obj_index_juul_tank or object_index == obj_index_cost_flighter or object_index == obj_index_obstacle) {
+			if (object_index == obj_index_juul_fighter or object_index == obj_index_juul_ranged or object_index == obj_index_juul_tank or object_index == obj_index_cost_flighter or object_index == obj_index_obstacle or object_index == obj_index_ta_lily) {
 				draw_sprite_ext(visual, 0, room_width/2 + 200, room_height/2 - 100, 10, 10, 0, c_white, 1);
 			} else if (object_index == obj_index_bahamowrang) {
 				draw_sprite_ext(visual, 7, room_width/2 + 200, room_height/2 - 100, 10, 10, 0, c_white, 1);

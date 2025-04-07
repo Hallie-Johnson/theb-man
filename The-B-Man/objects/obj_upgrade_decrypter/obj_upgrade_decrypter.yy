@@ -31,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_decrypter_icon",
-    "path":"sprites/spr_decrypter_icon/spr_decrypter_icon.yy",
+    "name":"spr_fun_upgrade",
+    "path":"sprites/spr_fun_upgrade/spr_fun_upgrade.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

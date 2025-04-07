@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_wrang_roger_clue",
-    "path":"sprites/spr_wrang_roger_clue/spr_wrang_roger_clue.yy",
+    "name":"spr_fun_upgrade",
+    "path":"sprites/spr_fun_upgrade/spr_fun_upgrade.yy",
   },
   "spriteMaskId":null,
   "visible":true,
