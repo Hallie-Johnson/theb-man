@@ -70,7 +70,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_abt_idle",
     "autoRecord":true,
     "backdropHeight":768,

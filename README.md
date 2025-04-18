@@ -4,8 +4,8 @@
 - **THE B-MAN - Gameplay Trailer**: TBA
 
 ### 🖥️ Game Engine + How to Run Game
-- **GameMaker** (IDE v2024.11.0.179 | Runtime v2024.11.0.226)
-- Choose the **Windows** or **macOS** platform to run it on. **Do not choose GX.games as the game will not properly show the graphics well.**
+- **GameMaker** (IDE: **v2024.13.0.190** | Runtime: **v2024.13.0.238**) -- **Please play the game with the latest version of GameMaker.**
+- Choose the **Windows** or **macOS** platform to run it on.
 
 ### 🕹️ Overview
 - **Genre**: Action
@@ -14,16 +14,16 @@
 - **Length**: 1hr+
 
 ### 🎮 Key Points
-- **THE B-WRANG**: 3 levels, 2D platformer, defeat various waves of Joker Juul's plagiarized student projects. 
-- **THE B-MOBILE**: 3 levels, avoid obstacles by navigating through 3 different lanes on the road to catch up to Abtwoman. 
-- **THE B-WING**: 3 levels, fly around the Queen city and destroy all of Captain Frostikyan's robots.
+- **THE B-WRANG**: 3 levels, 2D platformer, defeat various waves of Jester's plagiarized student projects. 
+- **THE B-MOBILE**: 3 levels, avoid obstacles by navigating through 3 different lanes on the road to catch up to Meowwoman. 
+- **THE B-WING**: 3 levels, fly around the Queen city and destroy all of Mr. Frozen's robots.
 - **Boss Battles**: 4 levels, master the game by completing challenging levels of each level type (THE B-WRANG, THE B-MOBILE, THE B-WING).
 - **Save File Functionality**: Auto-saving feature implemented to allow players to exit the game and come back later.
-- **Decrypter/Upgrades**: Collect up to 27 Caillois clues throughout the levels. Access the Decrypter and answer the clue questions correctly to earn an upgrade point. Use upgrade points to upgrade the Bahaman's academic weapons.
+- **Upgrades**: Collect up to 27 B-XP pickups throughout the levels. Use collected B-XP to upgrade the B-Man's academic weapons.
 - **Customizable Decrypter Questions**: Questions are pulled from a JSON file, allowing users to add up to 27 custom questions. Questions are located in the *datafiles* folder of the project.
 - **Index**: Refer to the index to learn more about the 20 characters, items, and academic weapons in the game.
 - **Tutorials**: Complete interactive tutorials for the THE B-WRANG, THE B-MOBILE, THE B-WING, and Decrypter to learn the game.
-- **Cutscenes**: Enter the world of Bahaman with pre-generated cutscenes.
+- **Cutscenes**: Enter the world of the B-Man with pre-generated cutscenes.
 - **Debug Console**: Activate cheat codes with simple commands.
 
 ---
@@ -31,7 +31,7 @@
 ### 🎯 Game Guide
 - Upon entering the game, you must **complete all tutorial levels** to unlock the main levels. If you need help in any level, you can pause the game and click the *Help* button to get level information.
 - **THE B-WRANG Guide**
-    - Objective: Avoid losing your health and survive the waves of enemies. If you run out of stamina by sprinting and/or punching, Bahaman will need to rest and will be vulnerable to attacks until his stamina is restored.
+    - Objective: Avoid losing your health and survive the waves of enemies. If you run out of stamina by sprinting and/or punching, B-Man will need to rest and will be vulnerable to attacks until his stamina is restored.
     - Controls:
         - **[W]** - Jump
         - **[D]** - Move Left
@@ -40,28 +40,28 @@
         - **[LEFT MOUSE BUTTON - LMB]** - Punch
         - **[RIGHT MOUSE BUTTON - RMB] + [Aim with Mouse]** - Throw THE B-WRANG
     - Hazards:
-        - **Joker Juul Fighter Bot**: Deals *medium* damage to the player upon collision.
-        - **Joker Juul Ranged Bot**: *Fires projectiles* at the player and deals damage upon collision.
-        - **Joker Juul Tank Bot**: Deals *high* damage to the player upon collision.
+        - **Jester Fighter Bot**: Deals *medium* damage to the player upon collision.
+        - **Jester Ranged Bot**: *Fires projectiles* at the player and deals damage upon collision.
+        - **Jester Tank Bot**: Deals *high* damage to the player upon collision.
     - Pickups:
-        - **Caillois Clues**: Collect a maximum of 3 in each level to upgrade Bahaman.
+        - **B-XP**: Collect a maximum of 3 in each level to upgrade the B-Man.
     - Tips:
         - **Upgrades Count**: THE B-WRANGs do not decrease your stamina and still cause damage. Prioritize upgrading THE B-WRANG count.
 - **THE B-MOBILE Guide**
-    - Objective: Dodge Abt Traps and obstacles and get to Abtwoman. Abt Traps, which look like an 'X' will deplete your health. Traffic cones are obstacles that will reduce your distance to Abtwoman. You must use your boost to reach Abtwoman in time.
+    - Objective: Dodge Cat Traps and obstacles and get to Meowwoman. Cat Traps, which look like an 'X' will deplete your health. Traffic cones are obstacles that will reduce your distance to Meowwoman. You must use your boost to reach Meowwoman in time.
     - Controls:
         - **[W]** - Move Up
         - **[S]** - Move Down
         - **[SHIFT]** - Boost
     - Hazards:
-        - **Traffic Cones**: Increases the distance between the THE B-MOBILE and Abtwoman, but *does not* deal any health damage.
-        - **Abt Traps**: Decreases the THE B-MOBILE's health, but *does not* affect distance from the THE B-MOBILE to Abtwoman.
+        - **Traffic Cones**: Increases the distance between the THE B-MOBILE and Meowwoman, but *does not* deal any health damage.
+        - **Cat Traps**: Decreases the THE B-MOBILE's health, but *does not* affect distance from the THE B-MOBILE to Meowwoman.
     - Pickups:
-        - **Caillois Clues**: Collect a maximum of 3 in each level to upgrade the THE B-MOBILE.
+        - **B-XP**: Collect a maximum of 3 in each level to upgrade the THE B-MOBILE.
         - **Boost**: Collect boost pickups to replenish boost.
     - Tips:
-        - **Consider the Consequences**: Driving can become difficult with faster speeds. Consider the options of hitting a traffic cone versus hitting an Abt Trap. If you are low on health, hit a traffic cone. If you are high on health, hit an Abt Trap.
-        - **Do Not Follow the Leader**: When Abtwoman is in sight, do not follow her movements. She will avoid traffic cones, but not Abt Traps, thus following her exactly might result in hitting Abt Traps and losing health.
+        - **Consider the Consequences**: Driving can become difficult with faster speeds. Consider the options of hitting a traffic cone versus hitting an Cat Trap. If you are low on health, hit a traffic cone. If you are high on health, hit an Cat Trap.
+        - **Do Not Follow the Leader**: When Meowwoman is in sight, do not follow her movements. She will avoid traffic cones, but not Cat Traps, thus following her exactly might result in hitting Abt Traps and losing health.
         - **Center Field**: When switching lanes, try to get back to the center lane to easily avoid hazards.
         - **Boost Carefully**: It's fun to boost, but boosting into to many obstacles will hinder progress. Boost when you feel safe to do so, not just because you can.
 - **THE B-WING Guide**
@@ -76,7 +76,7 @@
     - Hazards:
         - **Frost Fighter**: *Fires projectiles* at the player and causes damage to the THE B-WING upon collision.
     - Pickups:
-        - **Caillois Clues**: Collect a maximum of 3 in each level to upgrade the THE B-MOBILE.
+        - **B-XP**: Collect a maximum of 3 in each level to upgrade the THE B-MOBILE.
         - **Boost**: Collect boost pickups to replenish boost.
         - **Health**: Collect health pickups to replenish health.
     - Tips:
@@ -86,7 +86,7 @@
 ---
 
 ### 💾 Save File Information
-This game uses an auto-save feature. Progress is saved upon upgrading your character, decrypting clues, or successful completion of a level. To manually save, refer to the in-game settings.
+This game uses an auto-save feature. Progress is saved upon upgrading your character or successful completion of a level. To manually save, refer to the in-game settings.
 
 Windows Save File location: **C:\Users\[YOUR USERNAME]\AppData\Local\Summer_Game**
 
@@ -99,20 +99,20 @@ Cheat codes are handled with a debug console. You can access the debug console b
 - "**upgrade 1**" - Gives the player all upgrades.
 - "**tutorial 0**" - Sets all tutorials as incomplete.
 - "**tutorial 1**" - Sets all tutorials as complete.
-- "**wrang 0**" - Sets all THE B-WRANG levels as incomplete and removes all clues found for THE B-WRANG levels.
-- "**wrang 1**" - Sets all THE B-WRANG levels as completes and all clues are found.
-- "**mobile 0**" - Sets all THE B-MOBILE levels as incomplete and removes all clues found for THE B-MOBILE levels.
-- "**mobile 1**" - Sets all THE B-MOBILE levels as completes and all clues are found.
-- "**wing 0**" - Sets all THE B-WING levels as incomplete and removes all clues found for THE B-WING levels.
-- "**wing 1**" - Sets all THE B-WING levels as completes and all clues are found.
+- "**wrang 0**" - Sets all THE B-WRANG levels as incomplete and removes all B-XP found for THE B-WRANG levels.
+- "**wrang 1**" - Sets all THE B-WRANG levels as completes and all B-XP is found.
+- "**mobile 0**" - Sets all THE B-MOBILE levels as incomplete and removes all B-XP found for THE B-MOBILE levels.
+- "**mobile 1**" - Sets all THE B-MOBILE levels as completes and all B-XP is found.
+- "**wing 0**" - Sets all THE B-WING levels as incomplete and removes all B-XP found for THE B-WING levels.
+- "**wing 1**" - Sets all THE B-WING levels as completes and all B-XP is found.
 - "**sfx 0**" - Turns off sound effects.
 - "**sfx 1**" - Turns on sound effects.
 - "**music 0**" - Turns off music.
 - "**music 1**" - Turns on music.
 - "**fullscreen 0**" - Turns off fullscreen/sets game into windowed mode.
 - "**fullscreen 1**" - Turns on fullscreen.
-- "**upgrade points 0**" - Gives maximum upgrade points (27) and all clues decrypted.
-- "**upgrade points 1**" - Removes all upgrade points and locks all clues.
+- "**upgrade points 0**" - Gives maximum B-XP (27).
+- "**upgrade points 1**" - Removes all B-XP.
 - "**mission 0**" - Works when in-game. Auto-lose the mission.
 - "**mission 1**" - Works when in-game. Auto-win the mission.
 - "**health**" - Works when in-game. Gives 10000 health to the player.
@@ -123,14 +123,12 @@ Cheat codes are handled with a debug console. You can access the debug console b
     - **Misc Rooms**
         - rm_SaveFiles - Save File screen at the start of the game.
         - rm_Title - Title screen.
-        - rm_Clue - Decrypter screen.
-        - rm_Clue_Tutorial - Decrypter tutorial.
     - **Cutscene Rooms**
         - rm_Cutscene_1 - Introduction cutscene.
-        - rm_Cutscene_2 - Post Abtwoman boss battle cutscene.
-        - rm_Cutscene_3 - Post Captain Frostikyan boss battle cutscene.
-        - rm_Cutscene_4 - Pre Joker Juul boss battle cutscene.
-        - rm_Cutscene_5 - Post Joker Juul boss battle cutscene.
+        - rm_Cutscene_2 - Post Meowwoman boss battle cutscene.
+        - rm_Cutscene_3 - Post Mr. Frozen boss battle cutscene.
+        - rm_Cutscene_4 - Pre Jester boss battle cutscene.
+        - rm_Cutscene_5 - Post Jester boss battle cutscene.
         - rm_Cutscene_6 - Ending cutscene.
     - **Pre-Cutscene Rooms**
         - rm_Pre_Battle1 - Story screen before THE B-WRANG level 1.
@@ -157,50 +155,19 @@ Cheat codes are handled with a debug console. You can access the debug console b
         - rm_Battle2 - THE B-WRANG level 2.
         - rm_Battle3 - THE B-WRANG level 3.
         - rm_Battle4 - THE B-WRANG level 4.
-        - rm_Battle5 - THE B-WRANG level 5 (Joker Juul Boss Battle).
+        - rm_Battle5 - THE B-WRANG level 5 (Jester Boss Battle).
     - **THE B-MOBILE Rooms**
         - rm_Road0 - THE B-MOBILE tutorial.
         - rm_Road1 - THE B-MOBILE level 1.
         - rm_Road2 - THE B-MOBILE level 2.
         - rm_Road3 - THE B-MOBILE level 3.
-        - rm_Road4 - THE B-MOBILE level 4 (Abtwoman Boss Battle).
+        - rm_Road4 - THE B-MOBILE level 4 (Meowwoman Boss Battle).
     - **THE B-WING Rooms**
         - rm_Air0 - THE B-WING tutorial.
         - rm_Air1 - THE B-WING level 1.
         - rm_Air2 - THE B-WING level 2.
         - rm_Air3 - THE B-WING level 3.
-        - rm_Air4 - THE B-WING level 4 (Captain Frostikyan Boss Battle).
-
----
-
-### ❔ Decrypter Answers
-1. What did Johann Huizinga coin in his book 'Homo Ludens'? - ✔️ **The Magic Circle**
-2. What is an example of the Magic Circle? - ✔️ **Respawning**
-3. What elements are a part of Roger Caillois' definition of play? - ✔️ **All of the Above**
-4. What does MDA stand for? - ✔️ **Mechanics, Dynamics, Aesthetics**
-5. What is NOT a part of iterative game design? - ✔️ **Publish**
-6. What is the player's perspective of the MDA framework? - ✔️ **Aesthetics, Dynamics, Mechanics**
-7. What is NOT a part of Abt's definition of a game? - ✔️ **Negotiable Consequences**
-8. Which word matches this definition: The game is a series of actions taking place over time. - ✔️ **Activity**
-9. What is missing from Abt's definition of a game: Decision-Makers, Objectives, _____, and Activity. - ✔️ **Limiting Context**
-10. In GameMaker, what provides functionality to sprites? - ✔️ **Objects**
-11. In GameMaker, how do you move an object up 4 units? - ✔️ **y = y - 4**
-12. In GameMaker, what is a Viewport? - ✔️ **Lets the player see a small part of the screen**
-13. Which word matches this definition: Accompanied by a special awareness of a second reality or of a free unreality as against real life. - ✔️ **Make-Believe**
-14. Fill in the blank: _____ create meaningful gameplay and as a result, can make the player feel emotions. - ✔️ **Rules**
-15. What do rules give a game? - ✔️ **Logical Structure**
-16. What is missing from Costikyan's definition of a game: Resource Management, Art, Decision-Making Players, Goal, and _____. - ✔️ **Game Tokens**
-17. What is a Game Token according to Costikyan? - ✔️ **Representation of the state of the game**
-18. Which word matches this definition: Decisions made depend on resources available and manipulating resources. - ✔️ **Resource Management**
-19. Games are NOT... - ✔️ **Simple**
-20. Games are... - ✔️ **Formal Systems**
-21. Who is NOT a game theorist/designer? - ✔️ **Batman**
-22. What does CGM stand for? - ✔️ **Core Game Mechanic**
-23. Which theorist matches with the acronym of their definition of a game? - ✔️ **Abt - DOLA**
-24. What does not belong in Roger Caillois' definition of play? - ✔️ **Objective**
-25. Which word matches this definition: The different potential outcomes of the game are assigned different values, some positive and some negative. - ✔️ **Valorization of Outcome**
-26. Which element below is a part of Jesper Juul's definition of a game? - ✔️ **Rules**
-27. Which of the following is a game according to Jesper Juul? - ✔️ **Formula One Racing**
+        - rm_Air4 - THE B-WING level 4 (Mr. Frozen Boss Battle).
 
 ---
 
@@ -238,7 +205,3 @@ Cheat codes are handled with a debug console. You can access the debug console b
 - *Powerup/success.wav* by **GabrielAraujo** -- https://freesound.org/s/242501/ -- License: Creative Commons 0
 - *Snap Click 07.wav* by **ironcross32** -- https://freesound.org/s/582906/ -- License: Creative Commons 0
 - *Ui sounds* - **Shimmering success** by Philip_Berger -- https://freesound.org/s/648212/ -- License: Creative Commons 0
-
-
-#### Special Thanks
-Thank you ITCS 4230/5230 course staff for being the inspiration of this game of the year masterpiece! Please don't fire me. 

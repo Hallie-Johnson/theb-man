@@ -3,7 +3,13 @@
 
 cursor_sprite = spr_cursor;
 
-instance_create_layer(0, 0, "Instances", obj_RoomTransition);
-obj_RoomTransition.target_room = target_room;	
+if (room == rm_Cutscene_1) {
+	video_close()
+	audio_stop_sound(snd_intro);
+	room_goto(rm_Title)
+} else {	
+	instance_create_layer(0, 0, "Instances", obj_RoomTransition);
+	obj_RoomTransition.target_room = target_room;	
+}	
 
 video_close()

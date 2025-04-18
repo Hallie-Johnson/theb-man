@@ -19,13 +19,12 @@ if ((room == rm_SaveFiles || room == rm_Title) && debug) {
 	instance_deactivate_all(true);	
 } else if ((room == rm_SaveFiles || room == rm_Title) && !debug) {
 	instance_activate_all();	
-}
-
+} 
 if (debug) {
     if (keyboard_check_pressed(vk_backspace)) {
         input_text = string_copy(input_text, 1, string_length(input_text) - 1);
     } else if (keyboard_check_pressed(vk_enter)) {
-        check_debug_command(input_text);
+        check_debug_command(string_lower(input_text));
         input_text = "";
 		keyboard_string = "";
     } else {
@@ -41,17 +40,25 @@ function check_debug_command(cmd) {
         output_text = "Game Saved: " + string(global.timestamp);
 		
     } 
-	else if (string_pos("rm_Cutscene", cmd) > 0) {
-		var obj = asset_get_index(cmd);
+	else if (string_pos("rm cutscene ", cmd) > 0) {
+		var last_char = string_copy(cmd, string_length(cmd), 1);
+		var obj = asset_get_index("rm_Cutscene_" + last_char);
 		if (room_exists(obj)) { 
 			audio_stop_all();
 			room_goto(obj);
 		}
 		else output_text = "Unknown Room";
-	} else if (string_pos("rm_", cmd) > 0) {
-		var obj = asset_get_index(cmd);
-		if (room_exists(obj)) room_goto(obj);
-		else output_text = "Unknown Room";
+	} else if (string_pos("rm ", cmd) > 0) {
+		
+		for (var i = 0; i <= room_last; i++) {
+			var room_name = room_get_name(i);
+			var formatted_name = string_replace_all(string_lower(room_name), "_", " ");
+			//show_message(formatted_name);
+			if (formatted_name == cmd) {
+				var obj = asset_get_index(room_name);
+				if (room_exists(obj)) room_goto(obj);
+			} 
+		}
 	} 
 	else if (cmd == "upgrade 1") {
 		global.upgrade_wrang_health = 3;

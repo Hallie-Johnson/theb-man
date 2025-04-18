@@ -8,5 +8,4 @@ if (_videoStatus == 0)
 	draw_surface(_videoData[1], 0, 0);	
 }
 
-//draw_text(100, 100, string(fps));
 

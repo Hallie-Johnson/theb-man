@@ -52,7 +52,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"JokerJuul_Idle",
     "autoRecord":true,
     "backdropHeight":768,

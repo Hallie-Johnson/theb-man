@@ -10,8 +10,13 @@ switch (video_stage) {
 	case "video_end":
 		video_close()
 		cursor_sprite = spr_cursor;
-		instance_create_layer(0, 0, "Instances", obj_RoomTransition);
-		obj_RoomTransition.target_room = target_room;	
+		if (room == rm_Cutscene_1) {
+			room_goto(rm_Title)
+			audio_stop_sound(snd_intro);
+		} else {	
+			instance_create_layer(0, 0, "Instances", obj_RoomTransition);
+			obj_RoomTransition.target_room = target_room;	
+		}
 	break;
 }
 

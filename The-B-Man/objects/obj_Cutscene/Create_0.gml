@@ -3,7 +3,7 @@
 
 video = video_open(video_name);
 
-if (global.sound_music == false) video_set_volume(0);
+if (global.sound_music == false || room == rm_Cutscene_1) video_set_volume(0);
 
 video_enable_loop(false);
 

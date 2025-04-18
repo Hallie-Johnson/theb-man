@@ -7,4 +7,6 @@ if (alpha_text_fade) {
 	alpha_text -= 0.005;	
 }
 
+draw_text(50, 50, string(video_get_position()))
+
 if (room != rm_Cutscene_6) draw_text_color(50, 50, "PRESS [TAB] TO SKIP", c_dkgray, c_dkgray, c_dkgray, c_dkgray, alpha_text);
