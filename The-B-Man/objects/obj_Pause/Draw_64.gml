@@ -8,9 +8,20 @@ if (global.paused) {
 	instance_deactivate_object(obj_juul_bullet);
 	instance_deactivate_object(obj_bahamobile_spawner);
 	instance_deactivate_object(obj_bahamobile_spawner_boss);
+	
+	if (instance_exists(obj_mech)) {
+		obj_mech.moveSpeed = 0;
+		obj_mech.jumpSpeed = 0;
+	}
+	
 	cursor_sprite = spr_cursor;
 } else {
 	instance_activate_all();
+	
+	if (instance_exists(obj_mech)) {
+		obj_mech.jumpSpeed = 5; 
+		obj_mech.moveSpeed = 2;	
+	}
 }
 
 if (global.paused) {

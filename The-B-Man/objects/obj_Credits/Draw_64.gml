@@ -18,9 +18,9 @@ var level = string_char_at(room_get_name(room), string_length(room_get_name(room
 
 draw_set_color(c_black);
 //draw_text(display_get_gui_width() - 100, 755, bonus_str);
-draw_text(display_get_gui_width() - 100, 55, "This is the first build of BAHAMAN from Fall 2024. | LEVEL " + level + "/3");
+draw_text(display_get_gui_width() - 100, 55, "This is the first protoype of THE B-MAN. | LEVEL " + level + "/3");
 
 draw_set_color(c_white);
 //draw_text(display_get_gui_width() - 100, 750, bonus_str);
 draw_text_color(display_get_gui_width() - 100, 750, bonus_str, c_white, c_white, c_white, c_white, 0.25);
-draw_text(display_get_gui_width() - 100, 50, "This is the first build of BAHAMAN from Fall 2024. | LEVEL " + level + "/3");
+draw_text(display_get_gui_width() - 100, 50, "This is the first protoype of THE B-MAN. | LEVEL " + level + "/3");

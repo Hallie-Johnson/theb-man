@@ -13,4 +13,7 @@ if (!global.paused) image_alpha -= 0.005;
 
 if (image_alpha <= 0) instance_destroy()
 
-part_particles_create(part_sys, x, y, part_trail, 1);
+if (obj_jester_body.visible == true) {
+	part_particles_create(part_sys, x, y, part_trail, 1);
+}
+

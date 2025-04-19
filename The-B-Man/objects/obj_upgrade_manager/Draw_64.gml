@@ -20,6 +20,10 @@ draw_set_halign(fa_center);
 draw_sprite_ext(spr_upgrade_point, 2, room_width - 210, 215, -8, 8, 0, c_white, 1);
 //draw_sprite_ext(spr_clue_HUD, 6, room_width - 465, 465, 8, 8, 0, c_white, 1);
 
+if (global.upgrade_points < 0) {
+	global.upgrade_points = 0;	
+}
+
 draw_set_color(c_black);
 draw_text(room_width - 340, 445, "\nB-XP COUNT: " + string(global.upgrade_points) + "\n\nUPGRADES: " + string(upgrade_count) + " / 27");
 

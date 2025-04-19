@@ -1,11 +1,11 @@
-# THE B-MAN
+# The B-Man
 
 ### 🦇 Description
-- **THE B-MAN - Gameplay Trailer**: TBA
+- **The B-Man - Gameplay Trailer**: TBA
 
 ### 🖥️ Game Engine + How to Run Game
 - **GameMaker** (IDE: **v2024.13.0.190** | Runtime: **v2024.13.0.238**) -- **Please play the game with the latest version of GameMaker.**
-- Choose the **Windows** or **macOS** platform to run it on.
+- Choose the **Windows** or **macOS** platform to run it on. **GX Games** is suitable, but not preferred.
 
 ### 🕹️ Overview
 - **Genre**: Action
@@ -14,16 +14,15 @@
 - **Length**: 1hr+
 
 ### 🎮 Key Points
-- **THE B-WRANG**: 3 levels, 2D platformer, defeat various waves of Jester's plagiarized student projects. 
+- **THE B-WRANG**: 3 levels, 2D platformer, defeat various waves of the Jester's crime rate increasing bots. 
 - **THE B-MOBILE**: 3 levels, avoid obstacles by navigating through 3 different lanes on the road to catch up to Meowwoman. 
-- **THE B-WING**: 3 levels, fly around the Queen city and destroy all of Mr. Frozen's robots.
-- **Boss Battles**: 4 levels, master the game by completing challenging levels of each level type (THE B-WRANG, THE B-MOBILE, THE B-WING).
+- **THE B-WING**: 3 levels, fly around the city and destroy all of Mr. Frozen's robots.
+- **Boss Battles**: 3 levels, master the game by completing challenging levels of each level type (THE B-WRANG, THE B-MOBILE, THE B-WING).
+- **Upgrades**: Collect up to 27 B-XP pickups throughout the levels. Use collected B-XP to upgrade The B-Man's weapons.
+- **Index**: Refer to the index to learn more about the 20 characters, items, and weapons in the game.
+- **Tutorials**: Complete interactive tutorials for the THE B-WRANG, THE B-MOBILE, THE B-WING, and B-XP UPGRADER to learn the game.
+- **Cutscenes**: Enter the world of The B-Man with pre-generated cutscenes.
 - **Save File Functionality**: Auto-saving feature implemented to allow players to exit the game and come back later.
-- **Upgrades**: Collect up to 27 B-XP pickups throughout the levels. Use collected B-XP to upgrade the B-Man's academic weapons.
-- **Customizable Decrypter Questions**: Questions are pulled from a JSON file, allowing users to add up to 27 custom questions. Questions are located in the *datafiles* folder of the project.
-- **Index**: Refer to the index to learn more about the 20 characters, items, and academic weapons in the game.
-- **Tutorials**: Complete interactive tutorials for the THE B-WRANG, THE B-MOBILE, THE B-WING, and Decrypter to learn the game.
-- **Cutscenes**: Enter the world of the B-Man with pre-generated cutscenes.
 - **Debug Console**: Activate cheat codes with simple commands.
 
 ---
@@ -44,7 +43,7 @@
         - **Jester Ranged Bot**: *Fires projectiles* at the player and deals damage upon collision.
         - **Jester Tank Bot**: Deals *high* damage to the player upon collision.
     - Pickups:
-        - **B-XP**: Collect a maximum of 3 in each level to upgrade the B-Man.
+        - **B-XP**: Collect a maximum of 3 in each level to upgrade The B-Man.
     - Tips:
         - **Upgrades Count**: THE B-WRANGs do not decrease your stamina and still cause damage. Prioritize upgrading THE B-WRANG count.
 - **THE B-MOBILE Guide**
@@ -60,8 +59,8 @@
         - **B-XP**: Collect a maximum of 3 in each level to upgrade the THE B-MOBILE.
         - **Boost**: Collect boost pickups to replenish boost.
     - Tips:
-        - **Consider the Consequences**: Driving can become difficult with faster speeds. Consider the options of hitting a traffic cone versus hitting an Cat Trap. If you are low on health, hit a traffic cone. If you are high on health, hit an Cat Trap.
-        - **Do Not Follow the Leader**: When Meowwoman is in sight, do not follow her movements. She will avoid traffic cones, but not Cat Traps, thus following her exactly might result in hitting Abt Traps and losing health.
+        - **Consider the Consequences**: Driving can become difficult with faster speeds. Consider the options of hitting a traffic cone versus hitting a Cat Trap. If you are low on health, hit a traffic cone. If you are high on health, hit a Cat Trap.
+        - **Do Not Follow the Leader**: When Meowwoman is in sight, do not follow her movements. She will avoid traffic cones, but not Cat Traps, thus following her exactly might result in hitting Cat Traps and losing health.
         - **Center Field**: When switching lanes, try to get back to the center lane to easily avoid hazards.
         - **Boost Carefully**: It's fun to boost, but boosting into to many obstacles will hinder progress. Boost when you feel safe to do so, not just because you can.
 - **THE B-WING Guide**
@@ -76,7 +75,7 @@
     - Hazards:
         - **Frost Fighter**: *Fires projectiles* at the player and causes damage to the THE B-WING upon collision.
     - Pickups:
-        - **B-XP**: Collect a maximum of 3 in each level to upgrade the THE B-MOBILE.
+        - **B-XP**: Collect a maximum of 3 in each level to upgrade the THE B-WING.
         - **Boost**: Collect boost pickups to replenish boost.
         - **Health**: Collect health pickups to replenish health.
     - Tips:
@@ -95,6 +94,7 @@ Windows Save File location: **C:\Users\[YOUR USERNAME]\AppData\Local\Summer_Game
 ### ⭐ Cheat Codes
 Cheat codes are handled with a debug console. You can access the debug console by pressing the **[HOME]** button on your keyboard. Below are the commands you can use. Do not include the quotation (") marks.
 - "**save**" - Saves your current game.
+- "**quit**" - Closes the game.
 - "**upgrade 0**" - Removes all upgrades.
 - "**upgrade 1**" - Gives the player all upgrades.
 - "**tutorial 0**" - Sets all tutorials as incomplete.
@@ -120,6 +120,7 @@ Cheat codes are handled with a debug console. You can access the debug console b
 - "**stamina**" - Works when in-game. Gives 10000 stamina to the player.
 - "**skip wave**" - Works only in THE B-WRANG levels. Skips the current wave.
 - "**[ROOM NAME]**" - Takes you to the room you want to go. Here are the possible rooms:
+    - **NOTE** - If playing on **GX GAMES**, use the same room words, but instead of "_" use a space " ". (Ex. Windows: "rm_Pre_Battle1" vs. GX Games: "rm Pre Battle1")
     - **Misc Rooms**
         - rm_SaveFiles - Save File screen at the start of the game.
         - rm_Title - Title screen.
@@ -183,9 +184,11 @@ Cheat codes are handled with a debug console. You can access the debug console b
 - Game Text Font: **[Quadriana](https://fontesk.com/quadriana-font/)**
 - Game Artwork: **Hallie Johnson**
 - Cutscene Animation: **Hallie Johnson**
+- AI Disclaimer: **Chat GPT** was used for debugging code in various parts of the project.
 
 #### Music
 - *The Harrowing, City Lanes, Ions Above, Chiptune Roller Derby, Metro Alchemist, Run at Midnight, Synthwave C, Cruising the Skyline, Driving to the Future, Winds of Tek, Dystopian Paradise, Metro Tank, Drifting to the Finish Line, Synthwave I, Phantom of the Night, Positive Day, A Meeting of Genres, Anthem for Tomorrow, Bright Future Ahead, Just Breathe* -- **TeknoAXE** ([teknoaxke.com](https://teknoaxe.com/Home.php)) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/
+- *Purpose* -- **NEFFEX** ([soundcloud.com](https://soundcloud.com/neffexmusic/purpose?in=55sasha_55/sets/my-music-4)) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/
 
 #### Sounds
 [Creative Commons 0 License](https://creativecommons.org/publicdomain/zero/1.0/)

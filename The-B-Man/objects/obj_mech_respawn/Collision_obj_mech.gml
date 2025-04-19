@@ -12,3 +12,5 @@ if (instance_exists(nearest)) {
     other.x = target_x;
 	other.y = target_y;
 }
+
+other.effect_hit = 0.5;

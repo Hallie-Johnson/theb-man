@@ -24,7 +24,7 @@ if (instance_exists(obj_mech) && instance_exists(obj_jester_body)) {
 	}
 }
 
-show_debug_message(string(image_angle));
+//show_debug_message(string(image_angle));
 
 if (instance_exists(obj_jester_body)) {
 	x = obj_jester_body.x + x_offset;

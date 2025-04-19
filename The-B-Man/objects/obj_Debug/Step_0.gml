@@ -24,7 +24,8 @@ if (debug) {
     if (keyboard_check_pressed(vk_backspace)) {
         input_text = string_copy(input_text, 1, string_length(input_text) - 1);
     } else if (keyboard_check_pressed(vk_enter)) {
-        check_debug_command(string_lower(input_text));
+        if (os_type == os_gxgames) check_debug_command(string_lower(input_text));
+		else check_debug_command(input_text);
         input_text = "";
 		keyboard_string = "";
     } else {
@@ -35,12 +36,38 @@ if (debug) {
 
 function check_debug_command(cmd) {
 	
+	//show_message(string(os_type == os_gxgames) + " " + string(os_type == os_windows) + " " + string(cmd));
+	
+	// Save Game
     if (cmd == "save") {
         scr_save_game()
         output_text = "Game Saved: " + string(global.timestamp);
-		
     } 
-	else if (string_pos("rm cutscene ", cmd) > 0) {
+	
+	// Quit Game
+	if (cmd == "quit") {
+		game_end();	
+	}
+	
+	// Windows - Cutscene Room Traversal
+	else if (os_type == os_windows && string_pos("rm_Cutscene", cmd) > 0) {
+		var obj = asset_get_index(cmd);
+		if (room_exists(obj)) { 
+			audio_stop_all();
+			room_goto(obj);
+		}
+		else output_text = "Unknown Room"; 
+	} 
+	
+	// Windows - Room Traversal
+	else if (os_type == os_windows && string_pos("rm_", cmd) > 0) {
+		var obj = asset_get_index(cmd);
+		if (room_exists(obj)) room_goto(obj);
+		else output_text = "Unknown Room";
+	} 
+	
+	// GX Games - Cutscene Room Traversal
+	else if (os_type == os_gxgames && string_pos("rm cutscene ", cmd) > 0) {
 		var last_char = string_copy(cmd, string_length(cmd), 1);
 		var obj = asset_get_index("rm_Cutscene_" + last_char);
 		if (room_exists(obj)) { 
@@ -48,7 +75,10 @@ function check_debug_command(cmd) {
 			room_goto(obj);
 		}
 		else output_text = "Unknown Room";
-	} else if (string_pos("rm ", cmd) > 0) {
+	} 
+	
+	// GX Games - Room Traversal
+	else if (os_type == os_gxgames && string_pos("rm ", cmd) > 0) {
 		
 		for (var i = 0; i <= room_last; i++) {
 			var room_name = room_get_name(i);
@@ -60,6 +90,8 @@ function check_debug_command(cmd) {
 			} 
 		}
 	} 
+	
+	// All Upgrades Set to 3/3
 	else if (cmd == "upgrade 1") {
 		global.upgrade_wrang_health = 3;
 		global.upgrade_wrang_damage = 3;
@@ -72,7 +104,10 @@ function check_debug_command(cmd) {
 		global.upgrade_wing_speed = 3;
 		output_text = "All Upgrades Set to 3/3";
 		
-	} else if (cmd == "upgrade 0") {
+	} 
+	
+	// All Upgrades Set to 0/3
+	else if (cmd == "upgrade 0") {
 		global.upgrade_wrang_health = 0;
 		global.upgrade_wrang_damage = 0;
 		global.upgrade_wrang_count = 0;
@@ -83,22 +118,28 @@ function check_debug_command(cmd) {
 		global.upgrade_wing_damage = 0;
 		global.upgrade_wing_speed = 0;
 		output_text = "All Upgrades Set to 0/3";
-		
-	} else if (cmd == "tutorial 1") {
+	} 
+	
+	// All Tutorials Complete
+	else if (cmd == "tutorial 1") {
 		global.tutorial_battle_complete = true;
 		global.tutorial_driving_complete = true;
 		global.tutorial_flying_complete = true;
 		global.tutorial_decrypter_complete = true;
-		output_text = "All Tutorials Complete";
-		
-	} else if (cmd == "tutorial 0") {
+		output_text = "All Tutorials Complete";	
+	} 
+	
+	// All Tutorials Incomplete
+	else if (cmd == "tutorial 0") {
 		global.tutorial_battle_complete = false;
 		global.tutorial_driving_complete = false;
 		global.tutorial_flying_complete = false;
 		global.tutorial_decrypter_complete = false;
 		output_text = "All Tutorials Incomplete";
-		
-	} else if (cmd == "wrang 1") {
+	} 
+	
+	// All [5] B-Wrang Levels Complete
+	else if (cmd == "wrang 1") {
 		global.battle_level1_complete = true;
 		global.battle_level2_complete = true;
 		global.battle_level3_complete = true;
@@ -108,9 +149,11 @@ function check_debug_command(cmd) {
 		global.battle_1_clues = 3;
 		global.battle_2_clues = 3;
 		global.battle_3_clues = 3;
-		output_text = "All [5] Bahamowrang Levels Complete";
-		
-	} else if (cmd == "wrang 0") {
+		output_text = "All [5] B-Wrang Levels Complete";
+	} 
+	
+	// All [5] B-Wrang Levels Incomplete
+	else if (cmd == "wrang 0") {
 		global.battle_level1_complete = false;
 		global.battle_level2_complete = false;
 		global.battle_level3_complete = false;
@@ -120,9 +163,11 @@ function check_debug_command(cmd) {
 		global.battle_1_clues = 0;
 		global.battle_2_clues = 0;
 		global.battle_3_clues = 0;
-		output_text = "All [5] Bahamowrang Levels Incomplete";
-		
-	} else if (cmd == "mobile 0") {
+		output_text = "All [5] B-Wrang Levels Incomplete";
+	} 
+	
+	// All [4] B-Mobile Levels Incomplete
+	else if (cmd == "mobile 0") {
 		global.driving_level1_complete = false;
 		global.driving_level2_complete = false;
 		global.driving_level3_complete = false;
@@ -131,9 +176,11 @@ function check_debug_command(cmd) {
 		global.driving_1_clues = 0;
 		global.driving_2_clues = 0;
 		global.driving_3_clues = 0;
-		output_text = "All [4] Bahamobile Levels Incomplete";
-		
-	} else if (cmd == "mobile 1") {
+		output_text = "All [4] B-Mobile Levels Incomplete";
+	} 
+	
+	// All [4] B-Mobile Levels Complete
+	else if (cmd == "mobile 1") {
 		global.driving_level1_complete = true;
 		global.driving_level2_complete = true;
 		global.driving_level3_complete = true;
@@ -142,9 +189,11 @@ function check_debug_command(cmd) {
 		global.driving_1_clues = 3;
 		global.driving_2_clues = 3;
 		global.driving_3_clues = 3;
-		output_text = "All [4] Bahamobile Levels Complete";
-		
-	} else if (cmd == "wing 0") {
+		output_text = "All [4] B-Mobile Levels Complete";
+	} 
+	
+	// All [4] B-Wing Levels Incomplete
+	else if (cmd == "wing 0") {
 		global.flying_level1_complete = false;
 		global.flying_level2_complete = false;
 		global.flying_level3_complete = false;
@@ -153,9 +202,11 @@ function check_debug_command(cmd) {
 		global.flying_1_clues = 0;
 		global.flying_2_clues = 0;
 		global.flying_3_clues = 0;
-		output_text = "All [4] Bahamowing Levels Incomplete";
-
-	} else if (cmd == "wing 1") {
+		output_text = "All [4] B-Wing Levels Incomplete";
+	} 
+	
+	// All [4] B-Wing Levels Complete
+	else if (cmd == "wing 1") {
 		global.flying_level1_complete = true;
 		global.flying_level2_complete = true;
 		global.flying_level3_complete = true;
@@ -165,50 +216,67 @@ function check_debug_command(cmd) {
 		global.flying_2_clues = 3;
 		global.flying_3_clues = 3;
 		output_text = "All [4] Bahamowing Levels Complete";
-
-	} else if (cmd == "sfx 0") {
+	} 
+	
+	// Sound Effects Off
+	else if (cmd == "sfx 0") {
 		global.sound_effects = false;
 		output_text = "Sound Effects Off";
-		
-	} else if (cmd == "sfx 1") {
+	} 
+	
+	// Sound Effects On
+	else if (cmd == "sfx 1") {
 		global.sound_effects = true;
 		output_text = "Sound Effects On";
-		
-	} else if (cmd == "music 0") {
+	} 
+	
+	// Music Off
+	else if (cmd == "music 0") {
 		global.sound_music = false;
 		output_text = "Music Off";
-		
-	} else if (cmd == "music 1") {
+	} 
+	
+	// Music On
+	else if (cmd == "music 1") {
 		global.sound_music = true;
 		output_text = "Music On";
-		
-	} else if (cmd == "fullscreen 0") {
+	} 
+	
+	// Fullscreen Off
+	else if (cmd == "fullscreen 0") {
 		global.fullscreen = false;
 		window_set_fullscreen(false);
 		output_text = "Fullscreen Off";
-		
-	} else if (cmd == "fullscreen 1") {
+	} 
+	
+	// Fullscreen On
+	else if (cmd == "fullscreen 1") {
 		global.fullscreen = true;
 		window_set_fullscreen(true);
 		output_text = "Fullscreen On";
-		
-	} else if (cmd == "upgrade points 0") {
+	} 
+	
+	// Upgrade Points and Clues Unlocked set to 0/27
+	else if (cmd == "upgrade points 0") {
 		global.upgrade_points = 0;
 		global.clues_unlocked = [0, 
 				0, 0, 0, 0, 0, 0, 0, 0, 0, 
 				0, 0, 0, 0, 0, 0, 0, 0, 0,
 				0, 0, 0, 0, 0, 0, 0, 0, 0];
 		output_text = "Upgrade Points and Clues Unlocked set to 0/27";
-		
-	} else if (cmd == "upgrade points 1") {
+	} 
+	
+	// Upgrade Points and Clues Unlocked set to 27/27
+	else if (cmd == "upgrade points 1") {
 		global.upgrade_points = 27;
 		global.clues_unlocked = [1, 
 				1, 1, 1, 1, 1, 1, 1, 1, 1, 
 				1, 1, 1, 1, 1, 1, 1, 1, 1,
 				1, 1, 1, 1, 1, 1, 1, 1, 1];
 		output_text = "Upgrade Points and Clues Unlocked set to 27/27";
-		
 	} 
+	
+	// Mission Complete
 	else if (cmd == "mission 1") {
 		if (instance_exists(obj_bahaman) && room != rm_Battle5) {
 			obj_bahaman.draw_mission_complete = true;
@@ -218,12 +286,20 @@ function check_debug_command(cmd) {
 			obj_bahamowing.draw_mission_complete = true;	
 		} else if (instance_exists(obj_tutorial_bahamowrang_bahaman)) {
 			obj_tutorial_bahamowrang_bahaman.draw_mission_complete = true;
+		} else if (instance_exists(obj_upgrader_game)) {
+			obj_upgrader_game.b_xp_ctr = 27;
+			obj_upgrader_game.index = 4;
+		} else if (instance_exists(obj_mech)) {
+			global.battle_level5_complete = true;
+			room_goto(rm_Cutscene_5);
 		}
 		
 		if (room == rm_Air4) if (instance_exists(obj_cost_bubble)) obj_cost_bubble.hp = 0
 		if (room == rm_Road4) if (instance_exists(obj_bahamobile)) obj_bahamobile.abt_hp = 0
 		if (room == rm_Battle5) if (instance_exists(obj_bahaman)) obj_bahaman.juul_hp = 1;
 	} 
+	
+	// Mission Failed
 	else if (cmd == "mission 0") {
 		if (instance_exists(obj_bahaman)) {
 			obj_bahaman.draw_mission_failed = true;
@@ -233,8 +309,15 @@ function check_debug_command(cmd) {
 			obj_bahamowing.draw_mission_failed = true;	
 		} else if (instance_exists(obj_tutorial_bahamowrang_bahaman)) {
 			obj_tutorial_bahamowrang_bahaman.draw_mission_complete = true;
+		} else if (instance_exists(obj_upgrader_game)) {
+			obj_upgrader_game.b_xp_ctr = 0;
+			obj_upgrader_game.index = 0;
+		} else if (instance_exists(obj_mech)) {
+			obj_mech.draw_mission_failed = true;	
 		}
 	}
+	
+	// Health Set to 10000
 	else if (cmd == "health") {
 		if (instance_exists(obj_bahaman)) {
 			obj_bahaman.hp = 10000;
@@ -247,6 +330,8 @@ function check_debug_command(cmd) {
 		}
 		output_text = "Health Set to 10000";
 	}
+	
+	// Stamina/Boost Set to 10000
 	else if (cmd == "boost" || cmd == "stamina") {
 		if (instance_exists(obj_bahaman)) {
 			obj_bahaman.stam = 10000;
@@ -259,8 +344,10 @@ function check_debug_command(cmd) {
 		}
 		output_text = "Stamina Set to 10000";
 	} 
+	
+	// B-Wrang Skip Wave
 	else if (cmd == "skip wave") {
-		if (room == rm_Battle0 || room == rm_Battle1 || room == rm_Battle2 || room == rm_Battle3 || room == rm_Battle4 || room == rm_Battle5) {
+		if (room == rm_FinalBoss || room == rm_Battle0 || room == rm_Battle1 || room == rm_Battle2 || room == rm_Battle3 || room == rm_Battle4 || room == rm_Battle5) {
 			with obj_juul_enemy {
 				instance_destroy();	
 			}
@@ -270,6 +357,8 @@ function check_debug_command(cmd) {
 		}
 	}
 	
+	
+	// BONUS
 	else if (cmd == "walter") {
 		output_text = "uhhh... question. where can I put my comforter?";
 	} else if (cmd == "bahamon") {
@@ -280,7 +369,10 @@ function check_debug_command(cmd) {
 		output_text = "*gets nearly attacked by a comforter* - also thanks for the game name :)";
 	} else if (cmd == "hallie") {
 		output_text = "oh, so this is the TA that keeps making the \"Fired Jokes\"... ";
-	} else {
+	} 
+	
+	// Default
+	else {
 		output_text = "Unknown Command";	
 	}
 }

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if (mouse_check_button_pressed(mb_left)) {
+if (mouse_check_button_pressed(mb_left) && !global.paused) {
     shake_timer = game_get_speed(gamespeed_fps)/4; // 1 second at 60 FPS
 }
 
@@ -19,7 +19,7 @@ if (camera_setting = 1) {
 	y += (yTo - y) / 1 - 10;
 
 	if (instance_exists(obj_mech)) {
-		if (obj_mech.sprint_move && obj_mech.stam > (obj_mech.max_stam / 4)) {
+		if (obj_mech.sprint_move && obj_mech.stam > (obj_mech.max_stam / 4) && !global.paused) {
 			// Zoom out
 			camWidth = lerp(camWidth, 668, 0.1);
 			camHeight = lerp(camHeight, 384, 0.1);

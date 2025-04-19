@@ -15,6 +15,40 @@ draw_sprite_ext(
     0.75											// alpha
 );
 
+#region Effects
+
+if (effect_hit > 0) {
+draw_sprite_ext(
+    spr_effect_wrang_hit,							// sprite
+    0,											// sub-image
+    0,									// x position
+    0,										// y position
+    2,									// x scale
+    5,									// y scale
+    0,											// rotation
+    c_white,									// color
+    effect_hit								// alpha
+);
+}
+
+if (effect_juul_hit > 0) {
+draw_sprite_ext(
+    spr_effect_juul_hit,							// sprite
+    0,											// sub-image
+    display_get_gui_width(),									// x position
+    0,										// y position
+    2,									// x scale
+    5,									// y scale
+    0,											// rotation
+    c_white,									// color
+    effect_juul_hit											// alpha
+);
+}
+
+
+#endregion
+
+
 #region Status Bars (Health / Stamina)
 
 draw_sprite_ext(
@@ -258,7 +292,7 @@ draw_set_halign(fa_left);
 #region Timer
 
 if (timer > 0) {
-    if (!global.paused) timer -= 1; // Decrease the timer
+    if (!global.paused && activate_cinema = false) timer -= 1; // Decrease the timer
 }
 
 var total_seconds = floor(timer / room_speed);
@@ -283,7 +317,7 @@ draw_set_halign(fa_left);
 
 draw_set_halign(fa_center);
 draw_set_font(fnt_default_small);
-draw_text_color(display_get_gui_width()/2, 50, "DESTROY THE JESTER BOTS\nBEFORE TIME RUNS OUT", c_white, c_white, c_white, c_white, 0.5);
+draw_text_color(display_get_gui_width()/2, 50, "DESTROY ALL JESTER BOTS, THEN HIT THE JESTER\nBEFORE TIME RUNS OUT", c_white, c_white, c_white, c_white, 0.5);
 draw_set_font(fnt_default);
 	
 var juul_offset = 1120;
@@ -306,7 +340,7 @@ draw_sprite_ext(
 	
 if (juul_hp <= 0) {
 	global.battle_level5_complete = true;
-	instance_create_layer(x, y, "Save", obj_Save);
+	if (variable_global_exists("battle_level3_complete")) instance_create_layer(x, y, "Save", obj_Save);
 	room_goto(rm_Cutscene_5);	
 }
 
@@ -470,10 +504,12 @@ if (draw_mission_complete) {
 #endregion
 
 #region Cinematic Bars
-//cinema_bars = lerp(cinema_bars, 1, 0.05);
+
+if (activate_cinema) cinema_bars = lerp(cinema_bars, 1, 0.05);
+else cinema_bars = lerp(cinema_bars, 1.5, 0.05);
 
 draw_sprite_ext(
-    spr_black_bars,							// sprite
+    spr_black_bars_centered,							// sprite
     0,											// sub-image
     display_get_gui_width()/2,									// x position
     display_get_gui_height()/2,										// y position
@@ -483,4 +519,13 @@ draw_sprite_ext(
     c_white,									// color
     1											// alpha
 );
+
+show_debug_message(string(cinema_bars));
+
+if (cinema_bars < 1.05) {
+	draw_set_halign(fa_center);
+	if (juul_hp == 600) draw_text_color(display_get_gui_width()/2, display_get_gui_height()/2 + 450, "HAHAHAHA!!! YOU'RE MAKING ME LAUGH!! HEE HEE!", c_lime, c_lime, c_lime, c_lime, 1);
+	if (juul_hp == 300) draw_text_color(display_get_gui_width()/2, display_get_gui_height()/2 + 450, "TEE HEE!!! HEE!!!! JOKES ON YOU, MISTER B-MAN!", c_lime, c_lime, c_lime, c_lime, 1);
+}
+
 #endregion

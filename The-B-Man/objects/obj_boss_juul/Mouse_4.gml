@@ -5,5 +5,6 @@ if (!obj_boss_abt.clicked && !obj_boss_cost.clicked && global.driving_level4_com
 	clicked = true;
 	
 	instance_create_layer(0, 0, "Instances", obj_RoomTransition);
-	obj_RoomTransition.target_room = rm_Pre_Battle4;	
+	//obj_RoomTransition.target_room = rm_Pre_Battle4;	
+	obj_RoomTransition.target_room = rm_Cutscene_4;	
 }

@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (instance_exists(obj_upgrader_game)) {
+	if (obj_upgrader_game.b_xp_ctr >= 27) {
+		global.tutorial_decrypter_complete = true;	
+	}
+}
+
 if (global.tutorial_decrypter_complete) {
 	instance_create_layer(x, y, "Save", obj_Save);	
 }

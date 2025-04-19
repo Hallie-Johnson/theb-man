@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (obj_jester_body.visible == true) {
+	visible = true;
+} else {
+	visible = false;
+}
+
 speed = 3;
 
 image_xscale = 0.5;
@@ -19,8 +25,10 @@ if (color == 1) {
 }
 
 if (variable_global_exists("sound_effects")) {
-	if (global.sound_effects) 
-		audio_play_sound(snd_sfx_bahamowing_enemy_fire, 1, false);
+	if (global.sound_effects) {
+		var snd = audio_play_sound(snd_sfx_bahamowing_enemy_fire, 0.25, false);
+		audio_sound_gain(snd, 0.5, 0);
+	}
 }
 
 if (instance_exists(obj_jester_weapon)) {
@@ -39,4 +47,4 @@ part_type_size(part_trail, 0.1, 0.2, 0, 0);
 part_type_speed(part_trail, 1, 2, 0, 0);
 part_type_life(part_trail, 10, 30); // Lifetime of particles
 part_system_depth(part_sys, depth + 1);
-part_type_direction(part_trail, 0, 0, 0, 0);
+part_type_direction(part_trail, direction, direction, 0, 0);

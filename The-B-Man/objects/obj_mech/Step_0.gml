@@ -3,9 +3,7 @@
 
 if (y <= 32) y = 32;
 
-global.prev_x = x;
-global.prev_y = y;
-
+#region Check Movement Keys
 left_move = disable_turning == false && (keyboard_check(vk_left) || keyboard_check(ord("A"))) && !place_meeting(x - 5, y, obj_block);
 right_move = disable_turning == false && (keyboard_check(vk_right) || keyboard_check(ord("D"))) && !place_meeting(x + 5, y, obj_block);
 up_move = disable_turning == false && (keyboard_check(vk_up) || keyboard_check(ord("W")))
@@ -15,9 +13,13 @@ fire = mouse_check_button(mb_left);
 
 var moving = left_move || right_move || up_move || down_move;
 
-//show_debug_message(string(image_index))
+#endregion
 
-if (global.prev_y == y && global.prev_x == x) {
+#region Prevent Player Getting Stuck
+global.prev_x = x;
+global.prev_y = y;
+
+if (global.prev_y == y && global.prev_x == x && !global.paused) {
 	if (left_move) {
         x -= 0.5;
     } else if (right_move) {
@@ -26,22 +28,26 @@ if (global.prev_y == y && global.prev_x == x) {
 		y -= 0.5;
 	}	
 }
+#endregion
 
+#region Fire Golden Wrang Attack
 if (mouse_check_button_pressed(mb_right) && !global.paused && wrang_ctr < wrang_max) {
 	var shooter = instance_create_layer(x, y, "Instances", obj_bahamowrang)
 	shooter.target_x = mouse_x
 	shooter.target_y = mouse_y
 	wrang_ctr++;
 }
+#endregion
 
-
-if (fire && fired == false) {
+#region Mega Mech Bullet Attack
+if (fire && fired == false && !global.paused) {
 	fired = true;
 	var bullet_x = x - 10;
 	if (image_xscale == 1) bullet_x = x + 10;
 	var bullet = instance_create_layer(bullet_x, y + 5, "Instances", obj_mech_bullet);
 	alarm[0] = game_get_speed(gamespeed_fps)/2;
 }
+#endregion
 
 /*
 if (sprint_move && stam > 0) {
@@ -53,8 +59,9 @@ if (sprint_move && stam > 0) {
 	if (stam < max_stam) stam += 2;
 } */
 
+#region Sprite Management
 if (fired == false) {
-	if (moving) {
+	if (moving && !global.paused) {
 		if (up_move || sprint_move) {
 			sprite_index = spr_mech_jump; 
 		} else {
@@ -76,9 +83,13 @@ if (fired == false) {
 	}
 }
 
+if (global.paused) {
+	sprite_index = spr_mech_idle;	
+}
 
+#endregion
 
-
+#region Platformer Code
 var move = -left_move + right_move; 
 hsp = move * moveSpeed;
 
@@ -98,7 +109,7 @@ if (place_meeting(x, y + 1, obj_block)) {
 }
 
 // Jetpack effect: Hold Shift to go up
-if (sprint_move && stam > 0 && stam_recharge == false) {
+if (sprint_move && stam > 0 && stam_recharge == false && !global.paused) {
     vsp = -3; // jetpack thrust
     stam -= 0.5;
     grav = 0; // no gravity while boosting
@@ -135,7 +146,7 @@ if (place_meeting(x, y + vsp, obj_block)) {
 	vsp = 0;
 } 
 y += vsp;
-
+#endregion
 
 #region Radar Animation
 radar_frame += radar_speed;
@@ -145,12 +156,15 @@ if (radar_frame >= sprite_get_number(radar_sprite)) {
 }
 #endregion
 
+#region Mission Failed Criteria
 if (timer == 0 || hp <= 0) {
 	if (draw_mission_failed == false) effect_create_above(ef_explosion, x, y, 1, c_red);
 	sprite_index = spr_empty;
 	draw_mission_failed = true;	
 }
+#endregion
 
+#region Wave Completion
 if (wave_1_complete == false && juul_hp == 600 && instance_exists(obj_mech_spawner1) && obj_mech_spawner1.enemy_timer == -1 && instance_number(obj_juul_enemy) == 0 && timer > 0) {
 	instance_destroy(obj_mech_spawner1);
 	instance_create_layer(10, 10, "Instances", obj_mech_spawner2);
@@ -164,3 +178,8 @@ if (wave_2_complete == false && juul_hp == 300 && instance_exists(obj_mech_spawn
 	timer = 180 * 60;
 	wave_2_complete = true;
 }
+#endregion
+
+effect_juul_hit -= 0.005;
+effect_hit -= 0.01;
+
