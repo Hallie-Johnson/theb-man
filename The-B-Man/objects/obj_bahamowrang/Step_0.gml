@@ -19,7 +19,11 @@ y += moveY;
 if (distance_to_target <= 5) {
 	moveSpeed = 0
 	
-	if (alarm[0] < 0) alarm[0] = 75 //10
+	if (instance_exists(obj_mech)) {
+		if (alarm[0] < 0) alarm[0] = 75 * 4 //10
+	} else {
+		if (alarm[0] < 0) alarm[0] = 75 //10
+	}
 }
 
 // Update the image angle to create the spinning effect

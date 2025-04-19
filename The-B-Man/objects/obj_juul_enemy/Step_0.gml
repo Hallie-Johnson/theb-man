@@ -50,10 +50,9 @@ if (place_meeting(x, y, obj_block)) {
 
 var player;
 
-if (room != rm_Battle0)
-	player = instance_nearest(x, y, obj_bahaman);
-else 
-	player = instance_nearest(x, y, obj_tutorial_bahamowrang_bahaman);
+if (instance_exists(obj_mech)) player = instance_nearest(x, y, obj_mech);	
+else if (instance_exists(obj_bahaman)) player = instance_nearest(x, y, obj_bahaman);
+else if (instance_exists(obj_tutorial_bahamowrang_bahaman)) player = instance_nearest(x, y, obj_tutorial_bahamowrang_bahaman);
 	
 direction = point_direction(x, y, player.x, player.y);
 
@@ -69,12 +68,11 @@ if (!place_meeting(new_x, new_y, obj_juul_enemy)) {
 	
 	var dist_to_player = 0;
 	
-	if (room != rm_Battle0)
-		dist_to_player = point_distance(x, y, obj_bahaman.x, obj_bahaman.y);
-	else 
-		dist_to_player = point_distance(x, y, obj_tutorial_bahamowrang_bahaman.x, obj_tutorial_bahamowrang_bahaman.y);
+	if (instance_exists(obj_bahaman)) dist_to_player = point_distance(x, y, obj_bahaman.x, obj_bahaman.y);
+	else if (instance_exists(obj_mech)) dist_to_player = point_distance(x, y, obj_mech.x, obj_mech.y);
+	else if (instance_exists(obj_tutorial_bahamowrang_bahaman)) dist_to_player = point_distance(x, y, obj_tutorial_bahamowrang_bahaman.x, obj_tutorial_bahamowrang_bahaman.y);
 
-	if (dist_to_player <= 200) {
+	if ((!instance_exists(obj_mech) && dist_to_player <= 200) || (instance_exists(obj_mech) && dist_to_player <= 500)) {
 		if (!place_meeting(x, y + 16, obj_block)) {
 			x = new_x;
 			y = new_y;

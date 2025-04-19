@@ -20,12 +20,13 @@ part_system_depth(part_sys, obj_mech.depth - 1);
 
 
 if (obj_mech.image_xscale == 1) {
-	speed = -3;
+	speed = -4;
 	angle = -angle;
 	part_type_direction(part_trail, 0, 0, 0, 0);
 } else {
-	speed = 3;
+	speed = 4;
 	part_type_direction(part_trail, 180, 180, 0, 0);
 }
 
+alarm[0] = game_get_speed(gamespeed_fps) * 3;
 

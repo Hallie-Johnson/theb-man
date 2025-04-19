@@ -18,3 +18,7 @@ camHeight = 192 //384
 
 xTo = x;
 yTo = y;
+
+
+shake_timer = 0;
+shake_magnitude = 5;

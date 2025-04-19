@@ -4,6 +4,10 @@
 if (instance_exists(obj_bahaman)) {
 	var player = instance_nearest(x, y, obj_bahaman);
 
+	if (instance_exists(obj_mech)) {
+		player = instance_nearest(x, y, obj_mech);
+	}
+	
 // If a player is found, calculate the angle between the bullet and the player
 if (player != noone) {
     var angle_to_player = point_direction(x, y, player.x, player.y);

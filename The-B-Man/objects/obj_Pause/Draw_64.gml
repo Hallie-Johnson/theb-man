@@ -4,7 +4,7 @@
 // Draw GUI Event
 
 if (global.paused) {
-	instance_deactivate_object(obj_juul_enemy);
+	if (room != rm_FinalBoss) instance_deactivate_object(obj_juul_enemy);
 	instance_deactivate_object(obj_juul_bullet);
 	instance_deactivate_object(obj_bahamobile_spawner);
 	instance_deactivate_object(obj_bahamobile_spawner_boss);
@@ -101,6 +101,8 @@ for (var i = 0; i < num_buttons; i++) {
 				if (instance_exists(obj_tutorial_bahamobile)) obj_tutorial_bahamobile.visible = false;
 				if (instance_exists(obj_tutorial_bahamowing)) obj_tutorial_bahamowing.visible = false;
 				
+				if (instance_exists(obj_mech)) obj_mech.visible = false;
+				
 				instance_create_layer(0, 0, "Instances", obj_RoomTransition);
 				obj_RoomTransition.target_room = room;
 			} else if (button_labels[i] == "Help") {
@@ -126,6 +128,8 @@ for (var i = 0; i < num_buttons; i++) {
 				if (instance_exists(obj_tutorial_bahamowrang)) obj_tutorial_bahamowrang.visible = false;
 				if (instance_exists(obj_tutorial_bahamobile)) obj_tutorial_bahamobile.visible = false;
 				if (instance_exists(obj_tutorial_bahamowing)) obj_tutorial_bahamowing.visible = false;
+				
+				if (instance_exists(obj_mech)) obj_mech.visible = false;
 				
 				if (room == rm_Battle0 || room == rm_Road0 || room = rm_Air0) {
 					instance_create_layer(0, 0, "Instances", obj_RoomTransition);
@@ -172,6 +176,12 @@ if (show_help) {
 					+ "\n\n\n Controls:"
 					+ "\n\n [W] - Move Up \n\n [S] - Move Down \n\n [A] - Move Right \n\n [D] - Move Left \n\n [SHIFT] - Boost"
 					+ "\n\n [LMB + Aim with Mouse] - Shoot ";			
+	} else if (room == rm_FinalBoss ) {
+		help_str = "Objective: Take down The Jester using the B-MECH. Defeat waves of enemies\n"
+					+ "the time frame and hit The Jester in between waves.\n"
+					+ "\n\n\n Controls:"
+					+ "\n\n [W] - Jump \n\n [A] - Move Right \n\n [D] - Move Left \n\n [SHIFT] - Jet/Jump Boost"
+					+ "\n\n [LMB] - Shoot ";
 	}
 	
 	draw_text(500, 250, help_str);

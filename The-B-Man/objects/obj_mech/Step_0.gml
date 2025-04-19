@@ -1,15 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (y <= 32) y = 32;
+
 global.prev_x = x;
 global.prev_y = y;
 
-var left_move = disable_turning == false && (keyboard_check(vk_left) || keyboard_check(ord("A"))) && !place_meeting(x - 5, y, obj_block);
-var right_move = disable_turning == false && (keyboard_check(vk_right) || keyboard_check(ord("D"))) && !place_meeting(x + 5, y, obj_block);
-var up_move = disable_turning == false && (keyboard_check(vk_up) || keyboard_check(ord("W")))
-var down_move = keyboard_check(vk_down) || keyboard_check(ord("S"))
-var sprint_move = keyboard_check(vk_shift)
-var fire = mouse_check_button(mb_left);
+left_move = disable_turning == false && (keyboard_check(vk_left) || keyboard_check(ord("A"))) && !place_meeting(x - 5, y, obj_block);
+right_move = disable_turning == false && (keyboard_check(vk_right) || keyboard_check(ord("D"))) && !place_meeting(x + 5, y, obj_block);
+up_move = disable_turning == false && (keyboard_check(vk_up) || keyboard_check(ord("W")))
+down_move = keyboard_check(vk_down) || keyboard_check(ord("S"))
+sprint_move = keyboard_check(vk_shift)
+fire = mouse_check_button(mb_left);
 
 var moving = left_move || right_move || up_move || down_move;
 
@@ -25,6 +27,13 @@ if (global.prev_y == y && global.prev_x == x) {
 	}	
 }
 
+if (mouse_check_button_pressed(mb_right) && !global.paused && wrang_ctr < wrang_max) {
+	var shooter = instance_create_layer(x, y, "Instances", obj_bahamowrang)
+	shooter.target_x = mouse_x
+	shooter.target_y = mouse_y
+	wrang_ctr++;
+}
+
 
 if (fire && fired == false) {
 	fired = true;
@@ -34,14 +43,15 @@ if (fire && fired == false) {
 	alarm[0] = game_get_speed(gamespeed_fps)/2;
 }
 
+/*
 if (sprint_move && stam > 0) {
 	if (stam > 0) stam -= 1;
 	grav = 0
 	part_particles_create(part_sys, x, y, part_trail, 1);
 } else {	
 	grav = 0.4
-	if (stam < max_stam) stam += 0.1;
-}
+	if (stam < max_stam) stam += 2;
+} */
 
 if (fired == false) {
 	if (moving) {
@@ -76,9 +86,37 @@ if (vsp < 10) {
 	vsp += grav; 
 }
 
+/*
 if (place_meeting(x, y + 1, obj_block)) { 
 	vsp = (up_move || sprint_move) * -jumpSpeed 
+} */
+
+if (place_meeting(x, y + 1, obj_block)) {
+    if (up_move) {
+        vsp = -jumpSpeed;
+    }
 }
+
+// Jetpack effect: Hold Shift to go up
+if (sprint_move && stam > 0 && stam_recharge == false) {
+    vsp = -3; // jetpack thrust
+    stam -= 0.5;
+    grav = 0; // no gravity while boosting
+    part_particles_create(part_sys, x, y + 16, part_trail, 1); // jetpack particles
+} else {
+    grav = 0.4;
+	if (stam < max_stam) stam += 0.5;
+}
+
+if (stam <= 0) {
+	stam_recharge = true;	
+}
+
+if (stam_recharge) {
+	if (stam < max_stam) stam += 1;
+	if (stam == max_stam) stam_recharge = false;
+}
+
 
 // H Collisions 
 if (place_meeting(x + hsp, y, obj_block)) { 
@@ -97,3 +135,32 @@ if (place_meeting(x, y + vsp, obj_block)) {
 	vsp = 0;
 } 
 y += vsp;
+
+
+#region Radar Animation
+radar_frame += radar_speed;
+// Wrap animation frame if needed
+if (radar_frame >= sprite_get_number(radar_sprite)) {
+    radar_frame = 0;
+}
+#endregion
+
+if (timer == 0 || hp <= 0) {
+	if (draw_mission_failed == false) effect_create_above(ef_explosion, x, y, 1, c_red);
+	sprite_index = spr_empty;
+	draw_mission_failed = true;	
+}
+
+if (wave_1_complete == false && juul_hp == 600 && instance_exists(obj_mech_spawner1) && obj_mech_spawner1.enemy_timer == -1 && instance_number(obj_juul_enemy) == 0 && timer > 0) {
+	instance_destroy(obj_mech_spawner1);
+	instance_create_layer(10, 10, "Instances", obj_mech_spawner2);
+	timer = 120 * 60;
+	wave_1_complete = true;
+}
+
+if (wave_2_complete == false && juul_hp == 300 && instance_exists(obj_mech_spawner2) && obj_mech_spawner2.enemy_timer == -1 && instance_number(obj_juul_enemy) == 0 && timer > 0) {
+	instance_destroy(obj_mech_spawner2);
+	instance_create_layer(10, 10, "Instances", obj_mech_spawner3);
+	timer = 180 * 60;
+	wave_2_complete = true;
+}
