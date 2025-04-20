@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tutorial_bahamowrang",
+  "%Name":"obj_tutorial_mech",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -8,11 +8,11 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_tutorial_bahamowrang",
+  "name":"obj_tutorial_mech",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tutorials",
-    "path":"folders/Objects/Tutorials.yy",
+    "name":"Final Boss",
+    "path":"folders/Objects/Final Boss.yy",
   },
   "parentObjectId":null,
   "persistent":false,

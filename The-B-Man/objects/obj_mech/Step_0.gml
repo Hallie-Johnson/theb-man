@@ -109,7 +109,7 @@ if (place_meeting(x, y + 1, obj_block)) {
 }
 
 // Jetpack effect: Hold Shift to go up
-if (sprint_move && stam > 0 && stam_recharge == false && !global.paused) {
+if (sprint_move && stam > 0 && stam_recharge == false && !global.paused && draw_mission_complete == false && draw_mission_failed == false) {
     vsp = -3; // jetpack thrust
     stam -= 0.5;
     grav = 0; // no gravity while boosting
@@ -183,3 +183,7 @@ if (wave_2_complete == false && juul_hp == 300 && instance_exists(obj_mech_spawn
 effect_juul_hit -= 0.005;
 effect_hit -= 0.01;
 
+if (draw_mission_complete == true || draw_mission_failed == true) {
+	obj_mech.jumpSpeed = 0; 
+	obj_mech.moveSpeed = 0;	
+}

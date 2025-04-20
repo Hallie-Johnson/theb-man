@@ -292,7 +292,7 @@ draw_set_halign(fa_left);
 #region Timer
 
 if (timer > 0) {
-    if (!global.paused && activate_cinema = false) timer -= 1; // Decrease the timer
+    if (!global.paused && activate_cinema = false && draw_mission_complete == false && draw_mission_failed == false) timer -= 1; // Decrease the timer
 }
 
 var total_seconds = floor(timer / room_speed);
@@ -315,6 +315,8 @@ draw_set_halign(fa_left);
 
 #region JUUL BOSS
 
+if (room == rm_FinalBoss) { 
+	
 draw_set_halign(fa_center);
 draw_set_font(fnt_default_small);
 draw_text_color(display_get_gui_width()/2, 50, "DESTROY ALL JESTER BOTS, THEN HIT THE JESTER\nBEFORE TIME RUNS OUT", c_white, c_white, c_white, c_white, 0.5);
@@ -325,7 +327,9 @@ var juul_offset = 1120;
 var juul_hppc;
 juul_hppc = (juul_hp / juul_max_hp) * 100;
 draw_healthbar(630 + juul_offset, 95, 168 + juul_offset, 27, juul_hppc, c_black, c_lime, c_fuchsia, 0, true, true)
-	
+
+
+
 draw_sprite_ext(
 	spr_juul_healthbar,						// sprite
 	0,											// sub-image
@@ -342,6 +346,7 @@ if (juul_hp <= 0) {
 	global.battle_level5_complete = true;
 	if (variable_global_exists("battle_level3_complete")) instance_create_layer(x, y, "Save", obj_Save);
 	room_goto(rm_Cutscene_5);	
+}
 }
 
 #endregion
@@ -409,11 +414,9 @@ if (draw_mission_complete) {
 			visible = false;
 			instance_create_layer(x, y, "Save", obj_Save);
 			
-            if (room != rm_Battle4) {
+            if (room == rm_FinalBoss_Tutorial) {
 				instance_create_layer(0, 0, "Instances", obj_RoomTransition);
-				obj_RoomTransition.target_room = rm_IconHome;
-			} else {
-				room_goto(rm_Cutscene_4);	
+				obj_RoomTransition.target_room = rm_FinalBoss;
 			}
         }
     }

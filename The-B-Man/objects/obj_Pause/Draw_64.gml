@@ -187,7 +187,7 @@ if (show_help) {
 					+ "\n\n\n Controls:"
 					+ "\n\n [W] - Move Up \n\n [S] - Move Down \n\n [A] - Move Right \n\n [D] - Move Left \n\n [SHIFT] - Boost"
 					+ "\n\n [LMB + Aim with Mouse] - Shoot ";			
-	} else if (room == rm_FinalBoss ) {
+	} else if (room == rm_FinalBoss || room == rm_FinalBoss_Tutorial) {
 		help_str = "Objective: Take down The Jester using the B-MECH. Defeat waves of enemies\n"
 					+ "the time frame and hit The Jester in between waves.\n"
 					+ "\n\n\n Controls:"

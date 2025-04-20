@@ -4,7 +4,7 @@
 
 var player;
 
-if (room == rm_FinalBoss) {
+if (room == rm_FinalBoss || room == rm_FinalBoss_Tutorial) {
 	player = instance_nearest(x, y, obj_mech);
 	//if (image_xscale > 0) image_xscale -= 0.005;
 	//if (image_yscale > 0) image_yscale -= 0.005;
