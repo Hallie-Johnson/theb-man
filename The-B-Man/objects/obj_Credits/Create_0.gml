@@ -5,7 +5,7 @@ depth = -1000;
 
 y_val = display_get_gui_height();
 
-bonus_str = "\n\n[WASD] to MOVE\n[LMB] to throw WRANG\n[RMB] to PUNCH\n[SHIFT] to SPRINT\n[R] to RESET LEVEL\n[SPACE] to EXIT CREDITS"
+bonus_str = "\n\n[WASD] to MOVE\n[LMB] to throw WRANG\n[RMB] to PUNCH\n[SHIFT] to SPRINT\n[R] to RESET LEVEL\n[TAB] to EXIT CREDITS"
 
 credits_str = "CREATED BY\nBish Queen Games";
 

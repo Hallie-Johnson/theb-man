@@ -359,6 +359,7 @@ function check_debug_command(cmd) {
 	
 	
 	// BONUS
+	/*
 	else if (cmd == "walter") {
 		output_text = "uhhh... question. where can I put my comforter?";
 	} else if (cmd == "bahamon") {
@@ -369,7 +370,7 @@ function check_debug_command(cmd) {
 		output_text = "*gets nearly attacked by a comforter* - also thanks for the game name :)";
 	} else if (cmd == "hallie") {
 		output_text = "oh, so this is the TA that keeps making the \"Fired Jokes\"... ";
-	} 
+	} */
 	
 	// Default
 	else {

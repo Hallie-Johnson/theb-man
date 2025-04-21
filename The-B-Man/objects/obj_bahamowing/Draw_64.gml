@@ -543,7 +543,7 @@ if (room = rm_Air4) {
 	
 	draw_set_halign(fa_center);
 	draw_set_font(fnt_default_small);
-	draw_text_color(display_get_gui_width()/2, 50, "DESTROY [" + string(instance_number(obj_cost_tower)) + "] RADAR DAMPENING TOWERS\nTHEN TAKE DOWN MR. FROZEN", c_white, c_white, c_white, c_white, 0.5);
+	draw_text_color(display_get_gui_width()/2, 50, "DESTROY [" + string(instance_number(obj_cost_tower)) + "] BOT POWERING TOWERS\nTHEN TAKE DOWN MR. FROZEN", c_white, c_white, c_white, c_white, 0.5);
 	draw_set_font(fnt_default);
 	
 	var abt_offset = 1120;
