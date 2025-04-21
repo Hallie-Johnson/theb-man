@@ -1,0 +1,2 @@
+Installation Notes:
+- All files in the folder 'The-B-Man' need to be together for the executable to run.
