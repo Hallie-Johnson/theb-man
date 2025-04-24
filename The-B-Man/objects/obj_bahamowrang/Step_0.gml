@@ -5,7 +5,7 @@
 direction = point_direction(x, y, target_x, target_y);
 
 // Distance to target
-distance_to_target = point_distance(x, y, target_x, target_y);
+var distance_to_target = point_distance(x, y, target_x, target_y);
 
 // Calculate the movement vector
 var moveX = lengthdir_x(moveSpeed, direction);

@@ -15,12 +15,22 @@ draw_set_alpha(1);
 draw_set_font(fnt_default);
 draw_set_halign(fa_center);
 
+//draw_text(100, 100, string(percentage));
+
 if (global.timestamp == "N/A") {
-	draw_text(x, y, "NEW GAME");
+	draw_text(x, y, "NO SAVE FILE FOUND");
+	
+	start_text = "PRESS [SPACE] TO CREATE A NEW GAME";
+	
 } else {
-	draw_text(x, y - 100, "CONTINUE GAME\n\n" + global.timestamp + "\n\nPRESS [DELETE] TO DELETE SAVE");
+	draw_set_color(c_black);
+	draw_text(x, y - 80, "CONTINUE GAME  |  " + string(global.percentage) + "% COMPLETED \n\n" + global.timestamp + "\n\nPRESS [DELETE] TO DELETE SAVE");
+	
+	draw_set_color(c_white);
+	draw_text(x, y - 85, "CONTINUE GAME  |  " + string(global.percentage) + "% COMPLETED \n\n" + global.timestamp + "\n\nPRESS [DELETE] TO DELETE SAVE");
+	
 	start_text = "PRESS [SPACE] TO CONTINUE GAME";
 }
 
-draw_text_color(x, y + 155, start_text, c_black, c_black, c_black, c_black, alpha);
-draw_text_color(x, y + 150, start_text, c_white, c_white, c_white, c_white, alpha);
+draw_text_color(x, y + 355, start_text, c_black, c_black, c_black, c_black, alpha);
+draw_text_color(x, y + 350, start_text, c_white, c_white, c_white, c_white, alpha);

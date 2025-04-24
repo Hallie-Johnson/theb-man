@@ -27,13 +27,15 @@ else if (tutorial_step == 10)
 	step_text = "Obstacles like traffic cones will be on the road.\nAvoid these as these obstacles will increase your distance between you and your target."
 else if (tutorial_step == 11)
 	step_text = "Cat Traps will spawn on the road too.\nAvoid these obstacles as this will decrease your health. If you hit too many you will fail the mission."
-else if (tutorial_step == 12)
-	step_text = "Master this training by getting to the target destination within the timeframe."
+else if (tutorial_step == 12) 
+	step_text = "You can collect health pickups to replenish your health."
 else if (tutorial_step == 13)
+	step_text = "Master this training by getting to the target destination within the timeframe."
+else if (tutorial_step == 14)
 	step_text = "Press [ESC] to PAUSE the game at any time."
 
 
-if (!global.paused && tutorial_step < 14 && !obj_bahamobile.draw_mission_failed && !obj_bahamobile.draw_mission_complete) {
+if (!global.paused && tutorial_step < 15 && !obj_bahamobile.draw_mission_failed && !obj_bahamobile.draw_mission_complete) {
 
 draw_set_alpha(0.5)
 draw_set_color(c_red)

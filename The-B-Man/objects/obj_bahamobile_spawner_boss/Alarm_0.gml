@@ -16,9 +16,10 @@ for (var i = 0; i < array_length(lanes); i++) {
 		if (spawn_clue < (obj_bahamobile.car_speed * -1)) var trap = instance_create_layer(room_width, lanes[i], "Instances", obj_abt_trap); 
 		else var obj = instance_create_layer(room_width, lanes[i], "Instances", obj_obstacle); 
     } else {
-		var spawn_boost = irandom(3);
+		var spawn_boost = irandom(10);
 		//show_debug_message(string(spawn_boost))
-		if (spawn_boost > 2) var boost = instance_create_layer(room_width, lanes[i], "Lights", obj_bahamobile_boost); 
+		if (spawn_boost > 5) var boost = instance_create_layer(room_width, lanes[i], "Lights", obj_bahamobile_boost); 
+		if (spawn_boost == 1 && obj_bahamobile.hp != obj_bahamobile.max_hp) var health_boost = instance_create_layer(room_width, lanes[i], "Lights", obj_bahamobile_health);  
 	}
 	
 	if (i < array_length(lanes) - 1) {

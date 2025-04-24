@@ -124,6 +124,9 @@ for (var i = 0; i < num_buttons; i++) {
 				show_help = false;
 				
 			} else if (button_labels[i] == "Quit") {
+				
+				scr_save_game()
+				
 				show_help = false;
 				
 				global.paused = false;

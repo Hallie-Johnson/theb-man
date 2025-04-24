@@ -74,11 +74,18 @@ if (tutorial_step == 11) {
 if (tutorial_step == 12) {
 	if alarm[0] == -1
 	{
-		alarm[0] = room_speed * 5;
+		alarm[0] = room_speed * 8;
 	}	
 }
 
 if (tutorial_step == 13) {
+	if alarm[0] == -1
+	{
+		alarm[0] = room_speed * 5;
+	}	
+}
+
+if (tutorial_step == 14) {
 	if alarm[0] == -1
 	{
 		alarm[0] = room_speed * 8;

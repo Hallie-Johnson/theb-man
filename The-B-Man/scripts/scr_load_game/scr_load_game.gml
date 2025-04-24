@@ -73,10 +73,13 @@ function scr_load_game(){
 	    global.tutorial_driving_complete = load_data.tutorial_driving_complete;
 	    global.tutorial_flying_complete = load_data.tutorial_flying_complete;
 	    global.tutorial_decrypter_complete = load_data.tutorial_decrypter_complete;
+		
+		return load_data;
     
 	} else {
 	    // If the file doesn't exist, create an instance of an object that shows a "No save file found" message.
 	    //instance_create_layer(0, 0, "UI", oNoSaveMessage);
 		
 	}
+	
 }

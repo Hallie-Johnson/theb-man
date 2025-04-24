@@ -38,6 +38,8 @@ function check_debug_command(cmd) {
 	
 	//show_message(string(os_type == os_gxgames) + " " + string(os_type == os_windows) + " " + string(cmd));
 	
+	// show_message(cmd);
+	
 	// Save Game
     if (cmd == "save") {
         scr_save_game()
@@ -45,7 +47,7 @@ function check_debug_command(cmd) {
     } 
 	
 	// Quit Game
-	if (cmd == "quit") {
+	else if (cmd == "quit") {
 		game_end();	
 	}
 	
@@ -241,6 +243,11 @@ function check_debug_command(cmd) {
 		global.sound_music = true;
 		output_text = "Music On";
 	} 
+	
+	// Stop ALL Sounds
+	else if (cmd == "music 2" || cmd == "sfx 2") {
+		audio_stop_all();	
+	}
 	
 	// Fullscreen Off
 	else if (cmd == "fullscreen 0") {

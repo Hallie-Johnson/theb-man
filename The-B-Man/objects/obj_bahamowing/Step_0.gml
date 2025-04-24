@@ -98,7 +98,7 @@ y = clamp(y, 50, room_height - 50)
 #endregion
 
 #region Shooting
-if (canShoot && mouse_check_button_pressed(mb_left)) {
+if (canShoot && mouse_check_button_pressed(mb_left) && !global.paused) {
     canShoot = false;
     alarm[0] = 30;
 	

@@ -19,6 +19,7 @@
     {"name":"inst_2851B839","path":"rooms/rm_IconSettings/rm_IconSettings.yy",},
     {"name":"inst_7E41F66D","path":"rooms/rm_IconSettings/rm_IconSettings.yy",},
     {"name":"inst_47954B6C","path":"rooms/rm_IconSettings/rm_IconSettings.yy",},
+    {"name":"inst_629CF34F","path":"rooms/rm_IconSettings/rm_IconSettings.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -38,6 +39,7 @@
         {"$GMRInstance":"v2","%Name":"inst_E0E0A4E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_E0E0A4E","objectId":{"name":"obj_settings_save","path":"objects/obj_settings_save/obj_settings_save.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":8.0,"scaleY":8.0,"x":1536.0,"y":224.0,},
         {"$GMRInstance":"v2","%Name":"inst_2851B839","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2851B839","objectId":{"name":"obj_settings_save_quit","path":"objects/obj_settings_save_quit/obj_settings_save_quit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":8.0,"scaleY":8.0,"x":1536.0,"y":384.0,},
         {"$GMRInstance":"v2","%Name":"inst_7E41F66D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7E41F66D","objectId":{"name":"obj_settings_quit","path":"objects/obj_settings_quit/obj_settings_quit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":8.0,"scaleY":8.0,"x":1536.0,"y":544.0,},
+        {"$GMRInstance":"v2","%Name":"inst_629CF34F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":true,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_629CF34F","objectId":{"name":"obj_settings_percentage","path":"objects/obj_settings_percentage/obj_settings_percentage.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":952.0,"y":768.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRLayer":"","%Name":"Folder_1","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Folder_1","properties":[],"resourceType":"GMRLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[

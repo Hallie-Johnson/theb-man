@@ -2,6 +2,7 @@
 
 ### 🦇 Description
 - **The B-Man - Gameplay Trailer**: TBA
+- **The B-Man - Complete Walkthrough**: TBA
 
 ### 🖥️ Game Engine + How to Run Game
 - **GameMaker** (IDE: **v2024.13.0.190** | Runtime: **v2024.13.0.238**) -- **Please play the game with the latest version of GameMaker.**
@@ -58,6 +59,7 @@
     - Pickups:
         - **B-XP**: Collect a maximum of 3 in each level to upgrade the THE B-MOBILE.
         - **Boost**: Collect boost pickups to replenish boost.
+        - **Health**: Collect health pickups to replenish health.
     - Tips:
         - **Consider the Consequences**: Driving can become difficult with faster speeds. Consider the options of hitting a traffic cone versus hitting a Cat Trap. If you are low on health, hit a traffic cone. If you are high on health, hit a Cat Trap.
         - **Do Not Follow the Leader**: When Meowwoman is in sight, do not follow her movements. She will avoid traffic cones, but not Cat Traps, thus following her exactly might result in hitting Cat Traps and losing health.
@@ -105,10 +107,12 @@ Cheat codes are handled with a debug console. You can access the debug console b
 - "**mobile 1**" - Sets all THE B-MOBILE levels as completes and all B-XP is found.
 - "**wing 0**" - Sets all THE B-WING levels as incomplete and removes all B-XP found for THE B-WING levels.
 - "**wing 1**" - Sets all THE B-WING levels as completes and all B-XP is found.
-- "**sfx 0**" - Turns off sound effects.
-- "**sfx 1**" - Turns on sound effects.
-- "**music 0**" - Turns off music.
-- "**music 1**" - Turns on music.
+- "**sfx 0**" - Disables sound effects.
+- "**sfx 1**" - Enables sound effects.
+- "**sfx 2**" - Completely stops all music/sounds.
+- "**music 0**" - Disables music.
+- "**music 1**" - Enables on music.
+- "**music 2**" - Completely stops all music/sounds.
 - "**fullscreen 0**" - Turns off fullscreen/sets game into windowed mode.
 - "**fullscreen 1**" - Turns on fullscreen.
 - "**upgrade points 0**" - Gives maximum B-XP (27).

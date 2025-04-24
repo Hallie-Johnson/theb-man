@@ -38,7 +38,6 @@ if (clicked) {
 	draw_sprite_ext(spr_icon_bahamowrang, 0, room_width/2 + 500, room_height/2 - 50, 10, 10, 0, c_white, 1);
 	
 	
-	
 	if (instance_exists(obj_missions_selector)) {
 		return;
 	}

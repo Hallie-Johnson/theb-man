@@ -15,7 +15,7 @@ else if (spawn_chance < 40) {
     instance_create_layer(x, y, "Instances", obj_bahamowing_health);
 }
 // 30% chance for a Clue Pickup
-else if (spawn_chance < 70) {
+else if (spawn_chance < 70 && instance_number(obj_cost_flighter) > 2 && instance_number(obj_bahamowing_clue) == 0) {
 	
 	if (room == rm_Air1) {
 		if (global.flying_1_clues < 3) {
