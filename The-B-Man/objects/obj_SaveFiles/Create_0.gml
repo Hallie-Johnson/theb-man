@@ -1,13 +1,20 @@
 
+
 save = scr_load_game();
+//show_message(string(save));
 
-global.percentage = calculate_completion_percentage(save);
+if (save != undefined) {
+	global.percentage = calculate_completion_percentage(save);
+} else {
+	global.percentage = 0;	
+}
 
+/*
 if (global.fullscreen) {
 	window_set_fullscreen(true);
 } else {
 	window_set_fullscreen(false);
-}
+} */
 
 if (global.percentage == 100) {
 	sprite_index = spr_save_2;	
