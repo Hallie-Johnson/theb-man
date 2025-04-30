@@ -3,6 +3,13 @@
 
 video = video_open(video_name);
 
+if (string_pos("Cutscene_", video_name == -1)) {
+	show_message("Unable to find '" + video_name + "' video file.");
+	video_close();
+	instance_create_layer(0, 0, "Instances", obj_RoomTransition);
+	obj_RoomTransition.target_room = target_room;		
+}
+
 if (global.sound_music == false || room == rm_Cutscene_1) video_set_volume(0);
 else video_set_volume(0.25);
 

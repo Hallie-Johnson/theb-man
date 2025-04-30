@@ -11,3 +11,8 @@ if (debug) {
     draw_text(10, 10, input_text);
 	draw_text(10, 110, "[Debug Console] " + output_text);
 }
+
+if (global.debug) {
+	draw_set_halign(fa_right);
+	draw_text_color(display_get_gui_width() - 100, display_get_gui_height()	- 100, "DEBUG MODE ON\nPRESS [HOME] FOR CONSOLE", c_red, c_red, c_red, c_red, 0.5);
+}

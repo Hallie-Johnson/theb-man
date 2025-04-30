@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+global.debug = false;
+
 global.paused = false;
 
 global.timestamp = "N/A";

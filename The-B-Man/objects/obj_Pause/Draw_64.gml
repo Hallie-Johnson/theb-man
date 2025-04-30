@@ -195,7 +195,7 @@ if (show_help) {
 					+ "the time frame and hit The Jester in between waves.\n"
 					+ "\n\n\n Controls:"
 					+ "\n\n [W] - Jump \n\n [A] - Move Right \n\n [D] - Move Left \n\n [SHIFT] - Jet/Jump Boost"
-					+ "\n\n [LMB] - Shoot ";
+					+ "\n\n [LMB] - Shoot \n\n [RMB + Aim with Mouse] - Throw GOLDEN B-WRANG";
 	}
 	
 	draw_text(500, 250, help_str);

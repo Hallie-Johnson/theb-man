@@ -21,7 +21,7 @@
 - **Boss Battles**: 3 levels, master the game by completing challenging levels of each level type (THE B-WRANG, THE B-MOBILE, THE B-WING).
 - **Upgrades**: Collect up to 27 B-XP pickups throughout the levels. Use collected B-XP to upgrade The B-Man's weapons.
 - **Index**: Refer to the index to learn more about the 20 characters, items, and weapons in the game.
-- **Tutorials**: Complete interactive tutorials for the THE B-WRANG, THE B-MOBILE, THE B-WING, and B-XP UPGRADER to learn the game.
+- **Tutorials**: Complete interactive tutorials for THE B-WRANG, THE B-MOBILE, THE B-WING, and B-XP UPGRADER to learn the game.
 - **Cutscenes**: Enter the world of The B-Man with pre-generated cutscenes.
 - **Save File Functionality**: Auto-saving feature implemented to allow players to exit the game and come back later.
 - **Debug Console**: Activate cheat codes with simple commands.
@@ -48,25 +48,25 @@
     - Tips:
         - **Upgrades Count**: THE B-WRANGs do not decrease your stamina and still cause damage. Prioritize upgrading THE B-WRANG count.
 - **THE B-MOBILE Guide**
-    - Objective: Dodge Cat Traps and obstacles and get to Meowwoman. Cat Traps, which look like an 'X' will deplete your health. Traffic cones are obstacles that will reduce your distance to Meowwoman. You must use your boost to reach Meowwoman in time.
+    - Objective: Dodge Cat Traps and obstacles and get to Meowwoman. Cat Traps, which look like a paw print will deplete your health. Traffic cones are obstacles that will reduce your distance to Meowwoman. You must use your boost to reach Meowwoman in time.
     - Controls:
         - **[W]** - Move Up
         - **[S]** - Move Down
         - **[SHIFT]** - Boost
     - Hazards:
-        - **Traffic Cones**: Increases the distance between the THE B-MOBILE and Meowwoman, but *does not* deal any health damage.
-        - **Cat Traps**: Decreases the THE B-MOBILE's health, but *does not* affect distance from the THE B-MOBILE to Meowwoman.
+        - **Traffic Cones**: Increases the distance between THE B-MOBILE and Meowwoman, but *does not* deal any health damage.
+        - **Cat Traps**: Decreases the THE B-MOBILE's health, but *does not* affect distance from THE B-MOBILE to Meowwoman.
     - Pickups:
-        - **B-XP**: Collect a maximum of 3 in each level to upgrade the THE B-MOBILE.
+        - **B-XP**: Collect a maximum of 3 in each level to upgrade THE B-MOBILE.
         - **Boost**: Collect boost pickups to replenish boost.
         - **Health**: Collect health pickups to replenish health.
     - Tips:
         - **Consider the Consequences**: Driving can become difficult with faster speeds. Consider the options of hitting a traffic cone versus hitting a Cat Trap. If you are low on health, hit a traffic cone. If you are high on health, hit a Cat Trap.
         - **Do Not Follow the Leader**: When Meowwoman is in sight, do not follow her movements. She will avoid traffic cones, but not Cat Traps, thus following her exactly might result in hitting Cat Traps and losing health.
         - **Center Field**: When switching lanes, try to get back to the center lane to easily avoid hazards.
-        - **Boost Carefully**: It's fun to boost, but boosting into to many obstacles will hinder progress. Boost when you feel safe to do so, not just because you can.
+        - **Boost Carefully**: It's fun to boost, but boosting into too many obstacles will hinder progress. Boost when you feel safe to do so, not just because you can.
 - **THE B-WING Guide**
-    - Objective: Eliminate all enemies within the timeframe. When boosting, you cannot move up down due to the high speed of the THE B-WING. Upon getting defeated, enemies will drop power ups to restore your boost and health. In order to fire at enemies, the player will need to face the enemy in order to shoot as the THE B-WING cannot shoot targets behind itself.
+    - Objective: Eliminate all enemies within the timeframe. When boosting, you cannot move up and down due to the high speed of THE B-WING. Upon getting defeated, enemies will drop power ups to restore your boost and health. In order to fire at enemies, the player will need to face the enemy in order to shoot as THE B-WING cannot shoot targets behind itself.
     - Controls:
         - **[W]** - Move Up
         - **[S]** - Move Down
@@ -75,14 +75,14 @@
         - **[SHIFT]** - Boost
         - **[LEFT MOUSE BUTTON - LMB] + [Aim with Mouse]** - Shoot
     - Hazards:
-        - **Frost Fighter**: *Fires projectiles* at the player and causes damage to the THE B-WING upon collision.
+        - **Frost Fighter**: *Fires projectiles* at the player and causes damage to THE B-WING upon collision.
     - Pickups:
-        - **B-XP**: Collect a maximum of 3 in each level to upgrade the THE B-WING.
+        - **B-XP**: Collect a maximum of 3 in each level to upgrade THE B-WING.
         - **Boost**: Collect boost pickups to replenish boost.
         - **Health**: Collect health pickups to replenish health.
     - Tips:
         - **Slow and Steady**: Going fast is great to reach enemies within the timeframe, but take it slow when in combat to aim better.
-        - **Ready, Aim, Fire**: Make sure to face the enemy to fire. The THE B-WING cannot fire at enemies behind itself.
+        - **Ready, Aim, Fire**: Make sure to face the enemy to fire. THE B-WING cannot fire at enemies behind itself.
 
 ---
 
@@ -94,7 +94,7 @@ Windows Save File location: **C:\Users\[YOUR USERNAME]\AppData\Local\Summer_Game
 ---
 
 ### ⭐ Cheat Codes
-Cheat codes are handled with a debug console. You can access the debug console by pressing the **[HOME]** button on your keyboard. Below are the commands you can use. Do not include the quotation (") marks.
+Cheat codes are handled with a debug console. You can access the debug console by pressing the **[HOME] + [H] + [J] all together at once** button on your keyboard. Below are the commands you can use. Do not include the quotation (") marks.
 - "**save**" - Saves your current game.
 - "**quit**" - Closes the game.
 - "**upgrade 0**" - Removes all upgrades.

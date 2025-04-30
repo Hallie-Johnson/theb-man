@@ -33,7 +33,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"video_name","filters":[],"listItems":[],"multiselect":false,"name":"video_name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"BahamanCutscene_1.mp4","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"video_name","filters":[],"listItems":[],"multiselect":false,"name":"video_name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Cutscene_1.mp4","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"target_room","filters":[],"listItems":[],"multiselect":false,"name":"target_room","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_Title","path":"rooms/rm_Title/rm_Title.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_Title","varType":5,},
   ],
   "resourceType":"GMObject",
