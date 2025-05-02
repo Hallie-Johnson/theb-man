@@ -20,7 +20,7 @@ else if (tutorial_step == 6)
 else if (tutorial_step == 7)
 	step_text = "Because of the high speed, you cannot move up or down \nwhen boosting. BOOSTING also uses stamina."
 else if (tutorial_step == 8)
-	step_text = "Aim on the screen with your mouse and use [LEFT MOUSE BUTTON - LMB] to fire."
+	step_text = "Press [SPACE] to fire."
 else if (tutorial_step == 9)
 	step_text = "If the crosshair is WHITE or YELLOW, you are in range and can fire.\nIf the crosshair is GRAY, then you are not in range and cannot fire."
 else if (tutorial_step == 10)

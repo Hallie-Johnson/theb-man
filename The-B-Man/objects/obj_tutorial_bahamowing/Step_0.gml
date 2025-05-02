@@ -25,8 +25,9 @@ if (!global.paused) {
 		{
 			alarm[0] = room_speed * 7;
 		}
-	if (tutorial_step == 8 && (mouse_check_button(mb_left)))
-		tutorial_step = 9;
+	if (tutorial_step == 8 && (keyboard_check(vk_space)))
+		//tutorial_step = 9;
+		tutorial_step = 11;
 	if (tutorial_step == 9) 
 		if alarm[0] == -1
 		{

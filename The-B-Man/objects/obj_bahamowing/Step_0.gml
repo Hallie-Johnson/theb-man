@@ -98,7 +98,7 @@ y = clamp(y, 50, room_height - 50)
 #endregion
 
 #region Shooting
-if (canShoot && mouse_check_button_pressed(mb_left) && !global.paused) {
+if (canShoot && keyboard_check(vk_space) && !global.paused) {
     canShoot = false;
     alarm[0] = 30;
 	
@@ -108,21 +108,34 @@ if (canShoot && mouse_check_button_pressed(mb_left) && !global.paused) {
 	var x_bullet = x - 7;
 	
 	show_debug_message(string(display_mouse_get_x()));
+	
+	if (right) {
+		var bullet = instance_create_layer(x_bullet, y + 7, "Instances", obj_bahamowing_bullet);
+		//bullet.direction = point_direction(x, y, mouse_x, mouse_y);
+		bullet.speed = 8;
+	} else {
+		var bullet = instance_create_layer(x_bullet, y + 7, "Instances", obj_bahamowing_bullet);
+		//bullet.direction = point_direction(x, y, mouse_x, mouse_y);
+		bullet.speed = -8;
+	}
 
+	/*
 	if (display_mouse_get_x() > 700 && right) {
 		// Right
 		x_bullet = x + 7;
 		if (right) {
 			var bullet = instance_create_layer(x_bullet, y + 7, "Instances", obj_bahamowing_bullet);
-			bullet.direction = point_direction(x, y, mouse_x, mouse_y);
+			//bullet.direction = point_direction(x, y, mouse_x, mouse_y);
+			bullet.speed = 8;
 		}
 	} else if (display_mouse_get_x() < 1200 && !right) {
 		// Left
 		if (!right) {
 			var bullet = instance_create_layer(x_bullet, y + 7, "Instances", obj_bahamowing_bullet);
-			bullet.direction = point_direction(x, y, mouse_x, mouse_y);
+			//bullet.direction = point_direction(x, y, mouse_x, mouse_y);
+			bullet.speed = -8;
 		}
-	}    
+	} */
 }
 #endregion
 

@@ -1,8 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
 #region Crosshair
 
+/*
 if (global.paused == false) {
 
 // Get the mouse position in GUI coordinates
@@ -228,6 +230,7 @@ if (gui_mouse_x < gui_width / 2) {
 			);
 	}
 } */
+
 
 #endregion
 

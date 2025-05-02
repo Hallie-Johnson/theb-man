@@ -19,7 +19,7 @@ if (!variable_global_exists("prev_x")) {
 
 var left_move = (keyboard_check(vk_left) || keyboard_check(ord("A"))) && !place_meeting(x - 5, y, obj_block);
 var right_move = (keyboard_check(vk_right) || keyboard_check(ord("D"))) && !place_meeting(x + 5, y, obj_block);
-var up_move = keyboard_check(vk_up) || keyboard_check(ord("W"))
+var up_move = keyboard_check(vk_up) || keyboard_check(ord("W")) || keyboard_check(vk_space);
 var down_move = keyboard_check(vk_down) || keyboard_check(ord("S"))
 var sprint_move = keyboard_check(vk_shift)
 
