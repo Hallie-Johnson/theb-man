@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// window_mouse_set(clamp(window_mouse_get_x(), 0, window_get_width()), clamp(window_mouse_get_y(), 0, window_get_height()));
+
+
 var clue_count = global.battle_1_clues + global.battle_2_clues + global.battle_3_clues +
 				global.driving_1_clues + global.driving_2_clues + global.driving_3_clues +
 				global.flying_1_clues + global.flying_2_clues + global.flying_3_clues;

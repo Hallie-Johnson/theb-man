@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_upgrade_point",
-    "path":"sprites/spr_upgrade_point/spr_upgrade_point.yy",
+    "name":"spr_upgrade_here",
+    "path":"sprites/spr_upgrade_here/spr_upgrade_here.yy",
   },
   "spriteMaskId":null,
   "visible":true,

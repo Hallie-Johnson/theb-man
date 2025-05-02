@@ -3,7 +3,7 @@
 
 arrow_sprite = spr_arrow // Assign the arrow sprite here
 
-
+/*
 // Assuming obj_player is the player object
 if (instance_exists(obj_bahamowing)) {
     var player_x = obj_bahamowing.x;
@@ -19,7 +19,10 @@ if (instance_exists(obj_bahamowing)) {
     } else {
 		speed = 0;
 	}
-}
+} */
+
+speed = -2;
+image_angle = 10;
 
 og_speed = speed;
 

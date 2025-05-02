@@ -48,12 +48,14 @@ draw_set_font(fnt_default)
 draw_set_halign(fa_center);
 
 draw_set_color(c_black);
-draw_text(room_width/2, room_height/2 + 200, upgrade_text);
-draw_text(room_width/2, room_height/2 - 450 + 10, "['A' OR 'D'] TO NAVIGATE THE ARMORY");
+//draw_text(room_width/2, room_height/2 + 200, upgrade_text);
+//draw_text(room_width/2, room_height/2 - 450 + 10, "['A' OR 'D'] TO NAVIGATE THE ARMORY");
+draw_text(room_width/2, room_height/2 - 450 + 10, upgrade_text);
 
 draw_set_color(c_white);
-draw_text(room_width/2, room_height/2 + 195, upgrade_text);
-draw_text(room_width/2, room_height/2 - 450 + 5, "['A' OR 'D'] TO NAVIGATE THE ARMORY");
+//draw_text(room_width/2, room_height/2 + 195, upgrade_text);
+//draw_text(room_width/2, room_height/2 - 450 + 5, "['A' OR 'D'] TO NAVIGATE THE ARMORY");
+draw_text(room_width/2, room_height/2 - 450 + 5, upgrade_text);
 
 
 
